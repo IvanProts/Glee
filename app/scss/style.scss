@@ -3,6 +3,120 @@
 @import 'reset';
 @import 'global';
 
+.header {
+  padding: 45px 0;
+
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+
+  &__title {
+    font-size: 36px;
+    line-height: 1.6;
+    color: $blue-light;
+    @extend %rubik-500;
+  }
+}
+
+.menu {
+  &__list {
+    display: flex;
+  }
+
+  &__item:not(:last-child) {
+    padding-right: 35px;
+  }
+
+  &__link {
+    font-size: 15px;
+    line-height: 1;
+    color: $blue-light;
+    @extend %rubik-500;
+  }
+}
+
+.user-menu {
+  display: flex;
+  justify-content: space-between;
+
+  &__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border: transparent;
+    outline-color: $blue-light;
+  }
+
+  &__search {
+    margin-right: 20px;
+    background-color: #edf1f4;
+    border-radius: 50%;
+  }
+
+  &__preferences {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+  }
+
+  &__liked,
+  &__card {
+    position: relative;
+    width: 90px;
+    height: 50px;
+    background-color: #fcd7b6;
+  }
+
+  &__liked {
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+  }
+
+  &__liked::after {
+    content: "|";
+    position: absolute;
+    height: 32px;
+    color: transparent;
+    background-color: #fff;
+    opacity: 0.4;
+    right: 0;
+  }
+
+  &__card {
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+  }
+
+  &__num {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #fff;
+    top: 9px;
+    right: 26px;
+    color: #243f4d;
+    text-align: center;
+    font-size: 10px;
+    line-height: 1.7;
+    @extend %dmsans-400;
+  }
+
+  &__items {
+    background-color: #a3bbc8;
+    border-radius: 50%;
+  }
+}
+
 
 
 @import 'media';
