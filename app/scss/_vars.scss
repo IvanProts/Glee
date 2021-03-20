@@ -6,6 +6,9 @@ $port-gore: #1f2044;
 $provincial-pink: #fef7f0;
 $cello: #234969;
 $casper: #a3bbc8;
+$light-apricot: #fcd7b6;
+$blue-dianne: #243f4d;
+
 
 %dmsans-400 {
   font-family: "DMSans-Regular", sans-serif;
@@ -29,4 +32,11 @@ $casper: #a3bbc8;
 %rubik-500 {
   font-family: "Rubik-Medium", sans-serif;
   font-weight: 500;
+}
+
+%btn{
+  background-color: $casper;
+  color: #fff;
+  padding: 12px 15px;
+  @extend %dmsans-400;
 }
