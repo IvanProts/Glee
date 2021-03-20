@@ -1,6 +1,7 @@
 @import 'vars';
 @import 'fonts';
 @import 'reset';
+@import 'libs';
 @import 'global';
 
 .header {
@@ -61,7 +62,7 @@
     position: relative;
     width: 90px;
     height: 50px;
-    background-color: #fcd7b6;
+    background-color: $light-apricot;
   }
 
   &__liked {
@@ -176,10 +177,7 @@
 
   &__form-button {
     border: none;
-    background-color: $casper;
-    color: #fff;
-    padding: 12px 15px;
-    @extend %dmsans-400;
+    @extend %btn;
     line-height: 1.5;
     cursor: pointer;
   }
@@ -187,7 +185,7 @@
 
 .footer-bottom {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   padding: 35px 0;
   line-height: 1;
 
@@ -203,6 +201,123 @@
     }
   }
 }
+
+.top-slider {
+  &__inner {
+    background-color: $light-apricot;
+    background-size: cover;
+    padding-bottom: 40px;
+  }
+
+  &__content{
+    padding-left: 5px;
+  }
+
+  &__item {
+    display: flex !important;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 210px;
+    padding-top: 220px;
+  }
+
+  &__box{
+    margin-right: 30px;
+  }
+
+  &__title {
+    max-width: 500px;
+    @extend %rubik-500;
+    text-transform: uppercase;
+    font-size: 72px;
+    line-height: 1;
+    color: $blue-dianne;
+    font-weight: bold;
+    margin-bottom: 40px;
+  }
+
+  &__text {
+    max-width: 370px;
+    font-size: 18px;
+    line-height: 1.7;
+    color: $blue-light;
+    margin-bottom: 35px;
+  }
+
+  &__link {
+    display: inline-block;
+    @extend %btn;
+    @extend %rubik-500;
+    font-size: 15px;
+    line-height: 1;
+    padding: 23px 20px 23px 25px;
+
+    & svg {
+      margin-left: 60px;
+    }
+  }
+
+
+  &__image {
+    padding-top: 62px;
+    position: relative;
+    &::before {
+      content: " ";
+      position: absolute;
+      border-radius: 50%;
+      background-image: linear-gradient(-90deg, #fff, transparent);
+      width: 634px;
+      height: 634px;
+      top: -110px;
+      right: -130px;
+      z-index: -1;
+    }
+  }
+
+  .slick-dots {
+    display: flex;
+    justify-content: center;
+    li {
+      &:not(:last-child) {
+        margin-right: 10px;
+      }
+      button {
+        font-size: 11px;
+        font-weight: bold;
+        line-height: 1;
+        color: $blue-dianne;
+        @extend %rubik-500;
+        opacity: 0.3;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: #fff;
+        border: none;
+      }
+
+      &.slick-active {
+        button{
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+.Ellipse_35 {
+  border-radius: 50%;
+  background-color: rgb(255, 255, 255);
+  opacity: 0.302;
+  position: absolute;
+  left: 947px;
+  top: 890px;
+  width: 30px;
+  height: 29px;
+  z-index: 245;
+}
+
+
+
 
 
 
