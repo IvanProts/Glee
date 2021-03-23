@@ -1,3 +1,4 @@
+$white: #fff;
 $blue-light: #436372;
 $text-color--grey: #7b7b7b;
 $title--grey: #414141;
@@ -6,13 +7,15 @@ $button-text--grey: #8b8b8b;
 
 
 $port-gore: #1f2044;
+$mystic: #dae4e9;
 $provincial-pink: #fef7f0;
 $cello: #234969;
 $casper: #a3bbc8;
 $light-apricot: #fcd7b6;
 $blue-dianne: #243f4d;
 $westar: #e8e4df;
-
+$spanish-white: #feefe2;
+$edward: #b3b7b5;
 
 %dmsans-400 {
   font-family: "DMSans-Regular", sans-serif;
@@ -43,4 +46,8 @@ $westar: #e8e4df;
   color: #fff;
   padding: 12px 15px;
   @extend %dmsans-400;
+}
+
+%link{
+
 }
