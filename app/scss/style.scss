@@ -7,6 +7,14 @@
 .header {
   padding: 45px 0;
 
+  &__logo {
+    transition: transform 0.3s;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+
   &__nav {
     display: flex;
     justify-content: space-between;
@@ -24,10 +32,18 @@
   }
 
   &__link {
+    display: inline-block;
     font-size: 15px;
+    font-weight: bold;
     line-height: 1;
     color: $blue-light;
+    transition: transform 0.3s;
+    outline-color: $blue-dianne;
     @extend %rubik-500;
+
+    &:hover {
+      transform: scale(1.2);
+    }
   }
 }
 
@@ -43,11 +59,17 @@
     height: 50px;
     border: transparent;
     outline-color: $blue-light;
+    cursor: pointer;
+    transition: transform 0.3s;
+
+    &:hover {
+      transform: scale(1.2);
+    }
   }
 
   &__search {
     margin-right: 20px;
-    background-color: #edf1f4;
+    background-color: $mystic;
     border-radius: 50%;
   }
 
@@ -74,7 +96,7 @@
       position: absolute;
       height: 32px;
       color: transparent;
-      background-color: #fff;
+      background-color: $white;
       opacity: 0.4;
       right: 0;
     }
@@ -91,10 +113,10 @@
     width: 16px;
     height: 16px;
     border-radius: 50%;
-    background-color: #fff;
+    background-color: $white;
     top: 9px;
     right: 26px;
-    color: #243f4d;
+    color: $blue-dianne;
     text-align: center;
     font-size: 10px;
     line-height: 1.7;
@@ -102,7 +124,7 @@
   }
 
   &__items {
-    background-color: #a3bbc8;
+    background-color: $casper;
     border-radius: 50%;
   }
 }
@@ -112,7 +134,7 @@
   justify-content: space-between;
   align-items: baseline;
   padding: 75px 0;
-  border-bottom: 1px solid #dae4e9;
+  border-bottom: 1px solid $mystic;
 
   &__logo {
     display: flex;
@@ -180,12 +202,17 @@
     @extend %btn;
     line-height: 1.5;
     cursor: pointer;
+    transition: transform 0.3s;
+
+    &:hover{
+      transform: scale(1.2);
+    }
   }
 }
 
 .footer-bottom {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   padding: 35px 0;
   line-height: 1;
 
@@ -203,13 +230,15 @@
 }
 
 .top-slider {
+  padding-bottom: 75px;
+
   &__inner {
     background-color: $light-apricot;
     background-size: cover;
     padding-bottom: 40px;
   }
 
-  &__content{
+  &__content {
     padding-left: 5px;
   }
 
@@ -217,11 +246,11 @@
     display: flex !important;
     justify-content: center;
     align-items: flex-end;
-    padding-bottom: 210px;
-    padding-top: 220px;
+    padding-bottom: 12%;
+    padding-top: 12%;
   }
 
-  &__box{
+  &__box {
     margin-right: 30px;
   }
 
@@ -251,6 +280,12 @@
     font-size: 15px;
     line-height: 1;
     padding: 23px 20px 23px 25px;
+    outline-color: $blue-dianne;
+    transition: transform 0.3s ;
+
+    &:hover{
+      transform: scale(1.2);
+    }
 
     & svg {
       margin-left: 60px;
@@ -259,8 +294,9 @@
 
 
   &__image {
-    padding-top: 62px;
+    padding-top: 5em;
     position: relative;
+
     &::before {
       content: " ";
       position: absolute;
@@ -268,7 +304,7 @@
       background-image: linear-gradient(-90deg, #fff, transparent);
       width: 634px;
       height: 634px;
-      top: -110px;
+      top: -120px;
       right: -130px;
       z-index: -1;
     }
@@ -277,10 +313,12 @@
   .slick-dots {
     display: flex;
     justify-content: center;
+
     li {
       &:not(:last-child) {
         margin-right: 10px;
       }
+
       button {
         font-size: 11px;
         font-weight: bold;
@@ -291,12 +329,19 @@
         width: 30px;
         height: 30px;
         border-radius: 50%;
-        background-color: #fff;
+        background-color: $white;
         border: none;
+        cursor: pointer;
+        outline-color: $white;
+        transition: opacity 0.3s;
+
+        &:hover {
+          opacity: 1;
+        }
       }
 
       &.slick-active {
-        button{
+        button {
           opacity: 1;
         }
       }
@@ -304,18 +349,279 @@
   }
 }
 
-.Ellipse_35 {
-  border-radius: 50%;
-  background-color: rgb(255, 255, 255);
-  opacity: 0.302;
-  position: absolute;
-  left: 947px;
-  top: 890px;
-  width: 30px;
-  height: 29px;
-  z-index: 245;
+.benefits {
+  background-color: $provincial-pink;
+  padding: 45px 0;
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  &__item {
+    align-self: center;
+    justify-self: center;
+    max-width: 300px;
+    word-break: break-word;
+    position: relative;
+
+    &:not(:nth-child(2))::after {
+      content: "|";
+      position: absolute;
+      width: 1px;
+      height: 190%;
+      color: transparent;
+      background-color: $westar;
+      top: -44%;
+      right: -10vw;
+    }
+
+    &:nth-child(3)::after {
+      left: -10vw;
+    }
+  }
+
+  &__title,
+  &__descr {
+    text-align: left;
+  }
+
+  &__title {
+    @extend %dmsans-700;
+    font-size: 18px;
+    color: $title--grey;
+    position: relative;
+
+    &::before {
+      content: " ";
+      position: absolute;
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 50px;
+      height: 54px;
+      left: -30%;
+      top: 20%;
+    }
+  }
+
+  &__support {
+    &::before {
+      background-image: url('../images/icons/support.svg');
+    }
+  }
+
+  &__delivery {
+    &::before {
+      background-image: url('../images/icons/delivery.svg');
+    }
+  }
+
+  &__payment {
+    &::before {
+      background-image: url('../images/icons/payment.svg');
+    }
+  }
+
+
+  &__descr {
+    font-size: 16px;
+    line-height: 1.9;
+    @extend %dmsans-400;
+  }
 }
 
+.products {
+  padding-bottom: 105px;
+
+  &__inner {
+    text-align: center;
+  }
+
+  &__title {
+    margin-bottom: 40px;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 80px;
+  }
+
+  &__button {
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+
+  &__btn {
+    font-size: 16px;
+    @extend %dmsans-700;
+    color: $button-text--grey;
+    border: none;
+    background: none;
+    cursor: pointer;
+    transition: color 0.3s;
+    outline-color: $title--dark;
+
+    &:hover,
+    &.mixitup-control-active {
+      color: $title--dark;
+    }
+  }
+
+  &__items {
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-row-gap: 40px;
+    margin-bottom: 10vw;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    max-width: 270px;
+    min-height: 380px;
+    padding: 35px 20px;
+    border-radius: 10px;
+    @extend %dmsans-700;
+    box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
+
+    &:hover {
+      .products__item-buttons {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__item-buttons {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 70%;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  &__item-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px;
+    background-color: $white;
+    border: none;
+    border-radius: 50%;
+    outline-color: $casper;
+    transition: all 0.3s;
+
+    &:hover {
+      background-color: $casper;
+      transform: scale(1.2);
+
+      & svg {
+        path {
+          fill: #fff;
+        }
+      }
+    }
+
+    &:not(:last-child) {
+      margin-right: 15px;
+    }
+  }
+
+  &__item-image {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    flex-grow: 1;
+    position: relative;
+  }
+
+  &__item-img {
+    align-self: center;
+    max-width: 200px;
+    max-height: 220px;
+  }
+
+  &__item-title {
+    font-size: 16px;
+    line-height: 1.8;
+    color: $blue-dianne;
+  }
+
+  &__item-price {
+    font-size: 16px;
+    line-height: 1.5;
+    color: $casper;
+  }
+}
+
+.special {
+  display: flex;
+  justify-content: space-between;
+
+  &__offer {
+    background-color: $spanish-white;
+    width: 100%;
+    min-height: 390px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:nth-child(1) {
+      margin-right: 30px;
+    }
+  }
+
+  &__img {
+    margin-top: -22%;
+    margin-right: 3vw;
+  }
+
+  &__title {
+    @extend %dmsans-700;
+    font-size: 26px;
+    line-height: 1.2;
+    color: $blue-dianne;
+    padding-bottom: 25px;
+  }
+
+  &__descr {
+    font-size: 16px;
+    line-height: 1.8;
+    color: $blue-dianne;
+    max-width: 345px;
+    padding-bottom: 35px;
+  }
+
+
+  &__link {
+    display: inline-block;
+    @extend %rubik-500;
+    font-weight: 700;
+    color: $blue-light;
+    font-size: 15px;
+    line-height: 1;
+    background-color: transparent;
+    border: 1px solid $edward;
+    border-radius: 5px;
+    padding: 20px;
+    transition: transform 0.3s;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+
+    & svg {
+      margin-left: 45px;
+    }
+  }
+}
 
 
 

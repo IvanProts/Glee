@@ -16,6 +16,10 @@ body {
   flex-grow: 1;
 }
 
+.main-title{
+  display: none;
+}
+
 .main-container{
   max-width: 1800px;
   margin: 0 auto;
@@ -26,4 +30,11 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
+}
+
+.title{
+  @extend %dmsans-700;
+  font-size: 36px;
+  line-height: 1;
+  color: $title--dark;
 }
