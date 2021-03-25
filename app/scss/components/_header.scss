@@ -1,0 +1,153 @@
+.header {
+  padding: 45px 0;
+
+  &__logo {
+    transition: transform 0.3s;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.menu {
+  display: flex;
+
+  &__item:not(:last-child) {
+    padding-right: 35px;
+  }
+
+  &__link {
+    display: inline-block;
+    font-size: 15px;
+    line-height: 1;
+    color: $blue-light;
+    transition: transform 0.3s;
+    outline-color: $blue-dianne;
+    @extend %rubik-500;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+}
+
+.user-menu {
+  display: flex;
+  justify-content: space-between;
+
+  &__btn {
+    @include btn-cirkle;
+    width: 50px;
+    height: 50px;
+    outline-color: $blue-light;
+    cursor: pointer;
+    transition: transform 0.3s;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+
+    &:focus {
+      border: 1px solid $blue-dianne;
+    }
+
+    &:active {
+      opacity: 0.8;
+    }
+  }
+
+  &--icon1,
+  &--icon2,
+  &--icon3 {
+    color: $blue-dianne;
+  }
+
+  &--icon1 {
+    width: 16px;
+    height: 16px;
+  }
+
+  &--icon2 {
+    width: 18px;
+    height: 16px;
+  }
+
+  &--icon3 {
+    width: 19px;
+    height: 17px;
+  }
+
+  &--icon4 {
+    width: 20px;
+    height: 20px;
+    fill: $white
+  }
+
+  &__search {
+    margin-right: 20px;
+    background-color: $mystic;
+  }
+
+  &__preferences {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+  }
+
+  &__liked,
+  &__card {
+    position: relative;
+    width: 90px;
+    height: 50px;
+    background-color: $light-apricot;
+    border-radius: 0;
+  }
+
+  &__liked {
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+
+    &::after {
+      content: "|";
+      position: absolute;
+      height: 32px;
+      color: transparent;
+      background-color: $white;
+      opacity: 0.4;
+      right: 0;
+    }
+  }
+
+
+  &__card {
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+  }
+
+  &__num {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: $white;
+    top: 9px;
+    right: 26px;
+    color: $blue-dianne;
+    text-align: center;
+    font-size: 10px;
+    line-height: 1.7;
+    @extend %dmsans-400;
+  }
+
+  &__items {
+    background-color: $casper;
+    border-radius: 50%;
+  }
+}

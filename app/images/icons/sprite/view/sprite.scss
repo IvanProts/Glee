@@ -1,0 +1,104 @@
+%svg-common {
+	background: url("svg/sprite.view.svg") no-repeat;
+}
+
+.svg-delivery {
+	@extend %svg-common;
+	background-position: 0 0;
+}
+
+.svg-delivery-dims {
+	width: 53.75px;
+	height: 36.44px;
+}
+
+.svg-payment {
+	@extend %svg-common;
+	background-position: 0 99.15646258503402%;
+}
+
+.svg-payment-dims {
+	width: 53.56px;
+	height: 52.25px;
+}
+
+.svg-product-cart {
+	@extend %svg-common;
+	background-position: 52.18446601941748% 77%;
+}
+
+.svg-product-cart-dims {
+	width: 22px;
+	height: 20px;
+}
+
+.svg-product-like {
+	@extend %svg-common;
+	background-position: 73.54368932038835% 74.83098591549296%;
+}
+
+.svg-product-like-dims {
+	width: 22px;
+	height: 18px;
+}
+
+.svg-product-search {
+	@extend %svg-common;
+	background-position: 99.64285714285714% 29.030434782608694%;
+}
+
+.svg-product-search-dims {
+	width: 20px;
+	height: 20px;
+}
+
+.svg-support {
+	@extend %svg-common;
+	background-position: 72.51264755480607% 0;
+}
+
+.svg-support-dims {
+	width: 50.875px;
+	height: 53.13px;
+}
+
+.svg-user-cart {
+	@extend %svg-common;
+	background-position: 98.64699226852724% 55.57468312254446%;
+}
+
+.svg-user-cart-dims {
+	width: 18.94px;
+	height: 16.969px;
+}
+
+.svg-user-items {
+	@extend %svg-common;
+	background-position: 99.67133466704773% 0;
+}
+
+.svg-user-items-dims {
+	width: 20.03px;
+	height: 20.031px;
+}
+
+.svg-user-like {
+	@extend %svg-common;
+	background-position: 97.7803738317757% 80.28169014084507%;
+}
+
+.svg-user-like-dims {
+	width: 18px;
+	height: 18px;
+}
+
+.svg-user-search {
+	@extend %svg-common;
+	background-position: 48.98833394094058% 99.20102008980047%;
+}
+
+.svg-user-search-dims {
+	width: 15.28px;
+	height: 15.281px;
+}
+

@@ -1,0 +1,67 @@
+.special {
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__offer {
+    background-color: $spanish-white;
+    width: 100%;
+    min-height: 390px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:nth-child(1) {
+      margin-right: 30px;
+    }
+  }
+
+  &__img {
+    margin-top: -22%;
+    margin-right: 3vw;
+  }
+
+  &__title {
+    @extend %dmsans-700;
+    max-width: 345px;
+    font-size: 26px;
+    line-height: 1.2;
+    color: $blue-dianne;
+    margin-bottom: 25px;
+    @include text-clamp;
+  }
+
+  &__descr {
+    font-size: 16px;
+    line-height: 1.8;
+    color: $blue-dianne;
+    max-width: 345px;
+    margin-bottom: 35px;
+    @include text-clamp;
+  }
+
+
+  &__link {
+    display: inline-block;
+    @extend %rubik-500;
+    font-weight: 700;
+    color: $blue-light;
+    font-size: 15px;
+    line-height: 1;
+    background-color: transparent;
+    border: 1px solid $edward;
+    border-radius: 5px;
+    padding: 20px;
+    transition: transform 0.3s;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+
+    & svg {
+      margin-left: 45px;
+    }
+  }
+}

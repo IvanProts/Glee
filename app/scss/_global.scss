@@ -1,5 +1,5 @@
 html,
-body{
+body {
   height: 100%;
 }
 
@@ -12,27 +12,31 @@ body {
   flex-direction: column;
 }
 
-.main{
+img {
+  object-fit: contain;
+}
+
+.main {
   flex-grow: 1;
 }
 
-.main-title{
+.main-title {
   display: none;
 }
 
-.main-container{
-  max-width: 1800px;
-  margin: 0 auto;
-  padding: 0 15px;
-}
-
-.sub-container{
+.container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
+
+  &--large {
+    max-width: 1800px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
 }
 
-.title{
+.title {
   @extend %dmsans-700;
   font-size: 36px;
   line-height: 1;

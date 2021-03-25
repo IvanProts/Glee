@@ -1,0 +1,199 @@
+.top-slider {
+  padding-bottom: 75px;
+
+  &__inner {
+    background-color: $light-apricot;
+    background-size: cover;
+    padding-bottom: 40px;
+  }
+
+  &__content {
+    padding-left: 5px;
+  }
+
+  &__item {
+    display: flex !important;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 12%;
+    padding-top: 12%;
+  }
+
+  &__box {
+    margin-right: 30px;
+  }
+
+  &__title {
+    max-width: 500px;
+    @extend %rubik-500;
+    text-transform: uppercase;
+    font-size: 72px;
+    line-height: 1;
+    color: $blue-dianne;
+    font-weight: bold;
+    margin-bottom: 40px;
+    @include text-clamp;
+  }
+
+  &__text {
+    max-width: 370px;
+    font-size: 18px;
+    line-height: 1.7;
+    color: $blue-light;
+    margin-bottom: 35px;
+    @include text-clamp;
+  }
+
+  &__link {
+    display: inline-block;
+    @include btn;
+    @extend %rubik-500;
+    font-size: 15px;
+    line-height: 1;
+    padding: 23px 20px 23px 25px;
+    outline-color: $blue-dianne;
+    transition: transform 0.3s;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+
+    & svg {
+      margin-left: 60px;
+    }
+  }
+
+
+  &__image {
+    padding-top: 5em;
+    position: relative;
+
+    &::before {
+      content: " ";
+      position: absolute;
+      border-radius: 50%;
+      background-image: linear-gradient(-90deg, #fff, transparent);
+      width: 65vh;
+      height: 65vh;
+      top: -11vh;
+      right: -12vh;
+      z-index: -1;
+    }
+  }
+
+  .slick-dots {
+    display: flex;
+    justify-content: center;
+
+    li {
+      &:not(:last-child) {
+        margin-right: 10px;
+      }
+
+      button {
+        font-size: 11px;
+        font-weight: bold;
+        line-height: 1;
+        color: $blue-dianne;
+        @extend %rubik-500;
+        opacity: 0.3;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: $white;
+        border: none;
+        cursor: pointer;
+        outline-color: $white;
+        transition: opacity 0.3s;
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+
+      &.slick-active {
+        button {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+.benefits {
+  background-color: $provincial-pink;
+  padding: 45px 0;
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  &__item {
+    justify-self: center;
+    max-width: 215px;
+    position: relative;
+
+    &:not(:last-child)::after {
+      content: "|";
+      position: absolute;
+      width: 1px;
+      height: 190%;
+      color: transparent;
+      background-color: $westar;
+      top: -44%;
+      left: 21vw;
+    }
+
+    &::before {
+      content: " ";
+      position: absolute;
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 50px;
+      height: 54px;
+      left: -30%;
+      top: 10%;
+    }
+
+    &--icon1 {
+      max-width: 200px;
+
+      &::before {
+        background-image: url('../images/icons/support.svg');
+      }
+    }
+
+    &--icon2 {
+      &::before {
+        background-image: url('../images/icons/delivery.svg');
+      }
+    }
+
+    &--icon3 {
+      &::before {
+        background-image: url('../images/icons/payment.svg');
+      }
+    }
+  }
+
+  &__title,
+  &__descr {
+    text-align: left;
+    @include text-clamp;
+  }
+
+  &__title {
+    @extend %dmsans-700;
+    font-size: 18px;
+    color: $title--grey;
+    position: relative;
+  }
+
+  &__descr {
+    font-size: 16px;
+    line-height: 1.9;
+    @extend %dmsans-400;
+  }
+}
