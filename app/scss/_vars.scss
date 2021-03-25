@@ -18,36 +18,57 @@ $spanish-white: #feefe2;
 $edward: #b3b7b5;
 
 %dmsans-400 {
-  font-family: "DMSans-Regular", sans-serif;
+  font-family: "DMSans", sans-serif;
   font-weight: 400;
 }
 
 %dmsans-500 {
-  font-family: "DMSans-Medium", sans-serif;
+  font-family: "DMSans", sans-serif;
   font-weight: 500;
 }
 
 %dmsans-700 {
-  font-family: "DMSans-Bold", sans-serif;
+  font-family: "DMSans", sans-serif;
   font-weight: 700;
 }
 
 %rubik-400 {
-  font-family: "Rubik-Regular", sans-serif;
+  font-family: "Rubik", sans-serif;
   font-weight: 400;
 }
+
 %rubik-500 {
-  font-family: "Rubik-Medium", sans-serif;
+  font-family: "Rubik", sans-serif;
   font-weight: 500;
 }
 
-%btn{
+%user-icon {
+  fill: $blue-dianne;
+}
+
+@mixin btn {
   background-color: $casper;
   color: #fff;
   padding: 12px 15px;
   @extend %dmsans-400;
 }
 
-%link{
+@mixin btn-cirkle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
 
+@mixin text-clamp($lines: 2, $line-height: false) {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $lines;
+
+  @if $line-height {
+    max-height: $line-height * $lines * 1px;
+  }
 }
