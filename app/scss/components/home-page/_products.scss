@@ -5,10 +5,6 @@
     text-align: center;
   }
 
-  &__title {
-    margin-bottom: 40px;
-  }
-
   &__list {
     display: flex;
     justify-content: center;
@@ -48,32 +44,39 @@
 
   &__items {
     display: grid;
-    justify-content: space-between;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 380px);
     grid-row-gap: 40px;
-    margin-bottom: 10vw;
+  }
+}
+
+.products-item {
+  max-width: 270px;
+  max-height: 380px;
+  border-radius: 10px;
+  @extend %dmsans-700;
+  box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
+  transition: transform 0.3s;
+  font-size: 16px;
+
+  &--icon1,
+  &--icon2,
+  &--icon3 {
+    width: 20px;
+    height: 20px;
+    fill: $casper;
   }
 
-  &__item {
-    max-width: 270px;
-    max-height: 380px;
-    border-radius: 10px;
-    @extend %dmsans-700;
-    box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
-    transition: transform 0.3s;
-    font-size: 16px;
 
-    &:hover {
-      transform: scale(1.1);
+  &:hover {
+    transform: scale(1.1);
 
-      .products__item-buttons {
-        opacity: 1;
-      }
+    .products-item__buttons {
+      opacity: 1;
     }
   }
 
-  &__item-link {
+  &__link {
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -81,7 +84,7 @@
     padding: 35px 20px;
   }
 
-  &__item-buttons {
+  &__buttons {
     display: flex;
     justify-content: space-between;
     position: absolute;
@@ -90,7 +93,7 @@
     transition: opacity 0.3s;
   }
 
-  &__item-btn {
+  &__btn {
     @include btn-cirkle;
     padding: 12px;
     background-color: $white;
@@ -102,21 +105,17 @@
       background-color: $casper;
       transform: scale(1.2);
 
-      &:focus {
-        border: 1px solid $blue-dianne;
-      }
-
-      &:active {
-        opacity: 0.8;
-      }
-
-
-
       & svg {
-        path {
-          fill: #fff;
-        }
+        fill: #fff;
       }
+    }
+
+    &:focus {
+      border: 1px solid $blue-dianne;
+    }
+
+    &:active {
+      opacity: 0.8;
     }
 
     &:not(:last-child) {
@@ -124,7 +123,7 @@
     }
   }
 
-  &__item-image {
+  &__image {
     display: flex;
     justify-content: center;
     align-self: center;
@@ -132,19 +131,19 @@
     position: relative;
   }
 
-  &__item-img {
+  &__img {
     align-self: center;
     max-width: 200px;
     max-height: 220px;
   }
 
-  &__item-title {
+  &__title {
     line-height: 1.8;
     color: $blue-dianne;
     @include text-clamp;
   }
 
-  &__item-price {
+  &__price {
     line-height: 1.5;
     color: $casper;
   }

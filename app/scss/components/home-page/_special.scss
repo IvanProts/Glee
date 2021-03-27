@@ -57,7 +57,7 @@
     transition: transform 0.3s;
 
     &:hover {
-      transform: scale(1.2);
+      transform: translateX(10px);
     }
 
     & svg {

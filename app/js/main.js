@@ -8,6 +8,9 @@ $(function () {
     autoplaySpeed: 2000
   });
 
-  var mixer = mixitup('.products__items');
+  var container1 = document.querySelector('[data-ref="container-1"]');
+  var container2 = document.querySelector('[data-ref="container-2"]');
 
+  var mixer1 = mixitup(container1);
+  var mixer2 = mixitup(container2);
 });

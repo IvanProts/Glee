@@ -1,0 +1,84 @@
+.design{
+  padding: 105px 0 120px;
+  &__inner{
+    text-align: center;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 80px;
+  }
+
+  &__button {
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+
+  &__btn {
+    font-size: 16px;
+    @extend %dmsans-700;
+    color: $button-text--grey;
+    border: none;
+    background: none;
+    cursor: pointer;
+    transition: color 0.3s;
+    outline-color: $button-text--grey;
+
+    &:hover,
+    &.mixitup-control-active {
+      color: $title--dark;
+    }
+
+    &:focus {
+      border: 1px solid $blue-dianne;
+    }
+
+    &:active {
+      opacity: 0.8;
+    }
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 245px);
+    grid-row-gap: 35px;
+    grid-column-gap: 30px;
+  }
+  &__item{
+    background-color: $alabaster;
+    padding: 40px 0 40px 40px;
+    position: relative;
+  }
+  &__text{
+    z-index: 2;
+    @extend %dmsans-700;
+    max-width: 175px;
+    line-height: 1;
+    position: relative;
+  }
+
+  &__title{
+    font-size: 20px;
+    color: $title--dark;
+    margin-bottom: 20px;
+  }
+  &__subtitle{
+    font-size: 16px;
+    color: $casper;
+  }
+
+  &__img{
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    &--pos{
+      top: 15%;
+      right: 10%;
+    }
+  }
+}
