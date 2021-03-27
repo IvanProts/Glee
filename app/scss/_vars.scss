@@ -78,3 +78,10 @@ $alabaster: #f8f8f8;
   width: 20px;
   height: 20px;
 }
+
+@function max($numbers...){
+  @return m#{a}x(#{$numbers});
+}
+@function min($numbers...){
+  @return m#{i}n(#{$numbers});
+}

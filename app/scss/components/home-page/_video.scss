@@ -1,0 +1,15 @@
+.video{
+  padding-bottom: 120px;
+  &__popup{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    max-height: 500px;
+  }
+  &__link{
+    padding: 30vh;
+  }
+}
