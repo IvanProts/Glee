@@ -16,6 +16,7 @@ $blue-dianne: #243f4d;
 $westar: #e8e4df;
 $spanish-white: #feefe2;
 $edward: #b3b7b5;
+$alabaster: #f8f8f8;
 
 %dmsans-400 {
   font-family: "DMSans", sans-serif;
@@ -71,4 +72,9 @@ $edward: #b3b7b5;
   @if $line-height {
     max-height: $line-height * $lines * 1px;
   }
+}
+
+@mixin products-icon {
+  width: 20px;
+  height: 20px;
 }
