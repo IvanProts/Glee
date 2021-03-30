@@ -1,5 +1,5 @@
 .products {
-  padding-bottom: 185px;
+  padding-bottom: 180px;
 
   &__inner {
     text-align: center;
@@ -54,10 +54,8 @@
   max-width: 270px;
   max-height: 380px;
   border-radius: 10px;
-  @extend %dmsans-700;
   box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
   transition: transform 0.3s;
-  font-size: 16px;
 
   &--icon1,
   &--icon2,
@@ -138,12 +136,16 @@
   }
 
   &__title {
+    @extend %dmsans-500;
+    font-size: 16px;
     line-height: 1.8;
     color: $blue-dianne;
     @include text-clamp;
   }
 
   &__price {
+    @extend %dmsans-700;
+    font-size: 16px;
     line-height: 1.5;
     color: $casper;
   }
