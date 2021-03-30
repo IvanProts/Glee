@@ -156,25 +156,25 @@
       left: -30%;
       top: 10%;
     }
+  }
 
-    &--icon1 {
-      max-width: 200px;
+  &__item-icon1 {
+    max-width: 200px;
 
-      &::before {
-        background-image: url('../images/icons/support.svg');
-      }
+    &::before {
+      background-image: url('../images/icons/support.svg');
     }
+  }
 
-    &--icon2 {
-      &::before {
-        background-image: url('../images/icons/delivery.svg');
-      }
+  &__item-icon2 {
+    &::before {
+      background-image: url('../images/icons/delivery.svg');
     }
+  }
 
-    &--icon3 {
-      &::before {
-        background-image: url('../images/icons/payment.svg');
-      }
+  &__item-icon3 {
+    &::before {
+      background-image: url('../images/icons/payment.svg');
     }
   }
 
