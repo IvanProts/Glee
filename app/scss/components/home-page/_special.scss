@@ -1,5 +1,5 @@
 .special {
-
+  padding-bottom: 95px;
   &__content {
     display: flex;
     justify-content: space-between;
@@ -20,7 +20,7 @@
 
   &__img {
     margin-top: -22%;
-    margin-right: 3vw;
+    margin-right: 1vh;
   }
 
   &__title {
@@ -29,7 +29,7 @@
     font-size: 26px;
     line-height: 1.2;
     color: $blue-dianne;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
     @include text-clamp;
   }
 
