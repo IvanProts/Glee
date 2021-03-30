@@ -1,0 +1,121 @@
+.blog {
+  padding-bottom: 90px;
+
+  &__inner,
+  &__items {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__inner {
+    align-items: baseline;
+  }
+
+  &__link {
+    @extend %dmsans-700;
+    font-size: 16px;
+    color: $mine-shaft;
+    padding-right: 25px;
+    position: relative;
+    transition: transform 0.3s;
+    &::after{
+      content: "";
+      position: absolute;
+      background-image: url('../images/icons/arrow.svg');
+      width: 6px;
+      height: 11px;
+      top: 12px;
+      right: 0;
+    }
+
+    &:hover{
+      transform: scale(1.2);
+    }
+  }
+
+
+
+  &__item {
+    box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
+    max-width: 370px;
+    transition: transform 0.3s;
+    background-color: $white;
+    border-radius: 5px;
+    &:hover{
+      transform: scale(1.1);
+    }
+  }
+
+
+  &__image {
+    position: relative;
+    margin-bottom: 35px;
+  }
+
+  &__subtitle {
+    text-transform: uppercase;
+    font-size: 16px;
+    line-height: 1.2;
+    position: absolute;
+    @extend %poppins-700;
+    color: $white;
+    background-color: $casper;
+    padding: 10px 30px;
+    border-radius: 25px;
+    bottom: -15px;
+    left: 25px;
+  }
+
+  &__descr {
+    max-width: 315px;
+    @extend %dmsans-700;
+    color: $mine-shaft;
+    font-size: 18px;
+    line-height: 1.2;
+    margin: 0 auto;
+    text-align: left;
+    height: 60px;
+    @include text-clamp--large;
+    padding-bottom: 8vh;
+    border-bottom: 1px solid $alto;
+  }
+
+  &__info {
+    display: flex;
+    padding: 25px 30px;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: $ebony-clay;
+  }
+
+  &__data,
+  &__author{
+    position: relative;
+  }
+
+  &__data{
+    padding:0 30px 0 20px;
+    &::before{
+      content: "";
+      position: absolute;
+      background-image: url('../images/icons/calendar.svg');
+      width: 12px;
+      height: 12px;
+      left: 3px;
+      top: 6px;
+    }
+  }
+
+  &__author{
+    padding-left: 15px;
+    &::before {
+      content: "";
+      position: absolute;
+      background-image: url('../images/icons/user.svg');
+      width: 12px;
+      height: 12px;
+      left: 3px;
+      top: 6px;
+    }
+  }
+}

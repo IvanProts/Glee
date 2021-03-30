@@ -8,9 +8,22 @@ $(function () {
     autoplaySpeed: 2000
   });
 
-  var container1 = document.querySelector('[data-ref="container-1"]');
-  var container2 = document.querySelector('[data-ref="container-2"]');
+  $('.partners__slider').slick({
+    arrows: false,
+    slidesToShow: 5,
+    autoplay: true,
+    autoplaySpeed: 2000
+  });
 
-  var mixer1 = mixitup(container1);
-  var mixer2 = mixitup(container2);
+  var mixerTwo = mixitup('.products__items', {
+    selectors: {
+      target: '.products-item'
+    },
+  });
+
+  var mixerOne = mixitup('.design__content', {
+    selectors: {
+      target: '.design__item'
+    },
+  });
 });

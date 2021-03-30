@@ -52,6 +52,10 @@
     background-color: $alabaster;
     padding: 40px 0 40px 40px;
     position: relative;
+    transition: transform 0.3s;
+    &:hover{
+      transform: scale(1.1);
+    }
   }
   &__text{
     z-index: 2;

@@ -17,6 +17,9 @@ $westar: #e8e4df;
 $spanish-white: #feefe2;
 $edward: #b3b7b5;
 $alabaster: #f8f8f8;
+$mine-shaft: #262626;
+$alto: #e0e0e0;
+$ebony-clay: #222933;
 
 %dmsans-400 {
   font-family: "DMSans", sans-serif;
@@ -43,6 +46,11 @@ $alabaster: #f8f8f8;
   font-weight: 500;
 }
 
+%poppins-700 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+}
+
 %user-icon {
   fill: $blue-dianne;
 }
@@ -64,6 +72,17 @@ $alabaster: #f8f8f8;
 }
 
 @mixin text-clamp($lines: 2, $line-height: false) {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $lines;
+
+  @if $line-height {
+    max-height: $line-height * $lines * 1px;
+  }
+}
+
+@mixin text-clamp--large($lines: 3, $line-height: false) {
   overflow: hidden;
   display: -webkit-box;
   -webkit-box-orient: vertical;

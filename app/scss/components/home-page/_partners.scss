@@ -1,0 +1,23 @@
+.partners{
+  position: relative;
+  padding: 0 50px 90px 50px;
+
+  &__wrap {
+    position: absolute;
+    background-color: $provincial-pink;
+    z-index: -1;
+    width: 100%;
+    height: 440px;
+    top: -275px;
+  }
+}
+
+.slick-initialized .slick-slide {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.slick-slider .slick-track{
+  display: flex;
+  align-items: center;
+}
