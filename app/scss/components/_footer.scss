@@ -88,10 +88,10 @@
     padding: 10px 20px;
     line-height: 1.5;
     cursor: pointer;
-    transition: transform 0.3s;
+    transition: opacity 0.3s;
 
     &:hover {
-      transform: translateX(10px);
+      opacity: 0.8;
     }
 
     &:focus {
@@ -109,24 +109,32 @@
   justify-content: space-between;
   padding: 40px 0;
   line-height: 1;
+}
 
-  &__nav {
-    display: flex;
-  }
+.menu {
+  &__item {
+    &--footer {
+      padding: 0 12px;
 
-  &__nav-item {
-    padding: 0 12px;
 
-    &:not(:last-child) {
-      border-right: 1px solid;
+      &:not(:last-child) {
+        padding: 0 12px;
+        border-right: 1px solid;
+      }
     }
   }
 
-  &__nav-link {
-    transition: color 0.3s;
+  &__link {
+    &--footer {
+      @extend %rubik-400;
+      font-size: 14px;
+      line-height: 1;
+      color: $text-color--grey;
+      transition: color 0.3s;
 
-    &:hover {
-      color: $title--dark;
+      &:hover {
+        color: $title--dark;
+      }
     }
   }
 }

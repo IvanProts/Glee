@@ -1,4 +1,4 @@
-.products {
+.products-week {
   padding-bottom: 180px;
 
   &__inner {
@@ -50,17 +50,18 @@
   }
 }
 
-.products-item {
+.product-item {
   max-width: 270px;
   max-height: 380px;
   border-radius: 10px;
   box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
-  transition: transform 0.3s;
+  transition: opacity, box-shadow 0.3s;
 
   &:hover {
-    transform: scale(1.1);
+    opacity: 0.8;
+    box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.2);
 
-    .products-item__buttons {
+    .product-item__buttons {
       opacity: 1;
     }
   }

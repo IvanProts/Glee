@@ -28,12 +28,12 @@
     font-size: 15px;
     line-height: 1;
     color: $blue-light;
-    transition: transform 0.3s;
+    transition: opacity 0.3s;
     outline-color: $blue-dianne;
     @extend %rubik-500;
 
     &:hover {
-      transform: scale(1.2);
+      opacity: 0.8;
     }
   }
 }
@@ -48,24 +48,19 @@
     height: 50px;
     outline-color: $blue-light;
     cursor: pointer;
-    transition: transform 0.3s;
+    transition: opacity 0.3s;
 
-    &:hover {
-      transform: scale(1.2);
+    &:hover,
+    &:active {
+      opacity: 0.8;
     }
 
     &:focus {
       border: 1px solid $blue-dianne;
     }
-
-    &:active {
-      opacity: 0.8;
-    }
   }
 
-  &--icon1,
-  &--icon2,
-  &--icon3 {
+  &__icon{
     fill: $blue-dianne;
   }
 

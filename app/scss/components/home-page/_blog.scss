@@ -17,7 +17,7 @@
     color: $mine-shaft;
     padding-right: 25px;
     position: relative;
-    transition: transform 0.3s;
+    transition: opacity 0.3s;
     &::after{
       content: "";
       position: absolute;
@@ -29,7 +29,7 @@
     }
 
     &:hover{
-      transform: scale(1.2);
+      opacity: 0.8;
     }
   }
 
@@ -41,6 +41,7 @@
     transition: transform 0.3s;
     background-color: $white;
     border-radius: 5px;
+    position: relative;
     &:hover{
       transform: scale(1.1);
     }
@@ -48,11 +49,10 @@
 
 
   &__image {
-    position: relative;
     margin-bottom: 35px;
   }
 
-  &__subtitle {
+  &__category {
     text-transform: uppercase;
     font-size: 16px;
     line-height: 1.2;
@@ -62,8 +62,8 @@
     background-color: $casper;
     padding: 6px 30px;
     border-radius: 25px;
-    bottom: -15px;
-    left: 25px;
+    top: 57%;
+    left: 7%;
   }
 
   &__descr {

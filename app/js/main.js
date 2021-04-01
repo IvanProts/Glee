@@ -14,16 +14,16 @@ $(function () {
     autoplay: true,
     autoplaySpeed: 2000
   });
+  var product1 = document.querySelector('[data-ref="product"]');
+  var design = document.querySelector('[data-ref="design"]');
 
-  var mixerTwo = mixitup('.products__items', {
-    selectors: {
-      target: '.products-item'
-    },
-  });
+  var config = {
+    controls: {
+    scope: "local",
+  },
+};
 
-  var mixerOne = mixitup('.design__content', {
-    selectors: {
-      target: '.design__item'
-    },
-  });
+var mixer = mixitup(product1, config);
+var mixer2 = mixitup(design, config);
+
 });
