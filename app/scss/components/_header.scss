@@ -1,8 +1,98 @@
 .header {
   padding: 45px 0;
 
+  @include r(1200) {
+    .logo__img {
+      width: 120px;
+      height: 32px;
+    }
+
+    .menu {
+      font-size: 12px;
+      padding: 0 15px;
+      margin-left: 0;
+
+      &__item:not(:last-child) {
+        padding-right: 2vw;
+      }
+    }
+
+    .user-menu {
+      &__btn {
+        width: 40px;
+        height: 40px;
+      }
+
+      &__icon {
+        width: 15px;
+        height: 15px;
+      }
+
+      &__num {
+        width: 10px;
+        height: 10px;
+        top: 9px;
+        right: 23px;
+        line-height: 1.2;
+      }
+    }
+  }
+
+  @include r(768) {
+    padding: 30px;
+    .menu {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background-color: $light-apricot;
+      text-align: center;
+      height: 100%;
+      padding: 0;
+      transform: translateY(-150%);
+      transition: transform 0.5s;
+
+      &--active {
+        transform: translateY(0%);
+        z-index: 2;
+      }
+
+      &__item {
+        padding: 6vw 3vw;
+      }
+
+      &__item:not(:last-child) {
+        padding-right: 3vw;
+      }
+
+      &__link {
+        display: block;
+        font-size: 20px;
+
+        & span {
+          display: none;
+        }
+      }
+    }
+  }
+
+  @include r (440) {
+    padding: 20px 0;
+    .user-menu {
+      &__btn {
+        width: 35px;
+        height: 35px;
+      }
+    }
+  }
+
   &__logo {
     transition: transform 0.3s;
+    position: relative;
+    z-index: 3;
 
     &:hover {
       transform: scale(1.2);
@@ -18,6 +108,7 @@
 
 .menu {
   display: flex;
+  margin-left: 8vw;
 
   &__item:not(:last-child) {
     padding-right: 35px;
@@ -60,7 +151,7 @@
     }
   }
 
-  &__icon{
+  &__icon {
     fill: $blue-dianne;
   }
 
@@ -86,14 +177,14 @@
   }
 
   &__search {
-    margin-right: 20px;
+    margin-right: 1vw;
     background-color: $mystic;
   }
 
   &__preferences {
     display: flex;
     align-items: center;
-    margin-right: 20px;
+    margin-right: 1vw;
   }
 
   &__liked,
@@ -103,6 +194,7 @@
     height: 50px;
     background-color: $light-apricot;
     border-radius: 0;
+    z-index: 1;
   }
 
   &__liked {
@@ -142,7 +234,9 @@
   }
 
   &__items {
+    position: relative;
     background-color: $casper;
     border-radius: 50%;
+    z-index: 3;
   }
 }

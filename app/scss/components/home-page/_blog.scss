@@ -118,4 +118,31 @@
       top: 6px;
     }
   }
+  @include r(1200){
+    &__items{
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+    &__item{
+      margin-bottom: 30px;
+    }
+  }
+  @include r(768){
+    &__title{
+      font-size: 30px;
+      margin-bottom: 20px;
+    }
+  }
+  &__link {
+    font-size: 14px;
+    &::after{
+      top: 10px;
+    }
+  }
+  @include r(440){
+    &__title{
+      font-size: 28px;
+      max-width: 210px;
+    }
+  }
 }

@@ -12,7 +12,6 @@
 </head>
 
 <body>
-  @include('partials/header.html')
 
   <header class="header">
     <div class="container container--large">
@@ -33,7 +32,7 @@
           </li>
           <li class="menu__item">
             <a class="menu__link" href="#">Pages <span>+</span></a>
-          </li>п
+          </li>
           <li class="menu__item">
             <a class="menu__link" href="#">News</a>
           </li>
@@ -106,7 +105,7 @@
                 </a>
               </div>
               <div class="top-slider__image">
-                <img class="top-slider__img" src="images/slider/1.png" alt="slider img" width="640" height="264">
+                <img class="top-slider__img" src="images/slider/1.png" alt="slider img">
               </div>
             </div>
             <div class="top-slider__item">
@@ -128,7 +127,7 @@
                 </a>
               </div>
               <div class="top-slider__image">
-                <img class="top-slider__img" src="images/slider/1.png" alt="slider img" width="640" height="264">
+                <img class="top-slider__img" src="images/slider/1.png" alt="slider img">
               </div>
             </div>
             <div class="top-slider__item">
@@ -150,7 +149,7 @@
                 </a>
               </div>
               <div class="top-slider__image">
-                <img class="top-slider__img" src="images/slider/1.png" alt="slider img" width="640" height="264">
+                <img class="top-slider__img" src="images/slider/1.png" alt="slider img">
               </div>
             </div>
           </div>
@@ -474,11 +473,12 @@
                   Mirum Notare Tellus
                 </p>
               </div>
+              <div class="special__part">
               <p class="special__descr">
                 LEDCornBulb Lamp 5W 7W 10W 12W 15W E26 E27LEDCornLight
-              </p>
+              </p></div>
               <a class="special__link" href="#">View More
-                <svg class="top-slider__icon" width="22" height="9">
+                <svg class="special__icon" width="22" height="9">
                   <use xlink:href="images/icons/sprite/svg/sprite.symbol.svg#link-arrow"></use>
                 </svg>
               </a>
@@ -494,11 +494,12 @@
                   Euismod
                 </p>
               </div>
+              <div class="special__part">
               <p class="special__descr">
-                50W 8000lm Compact Size for HID StreetLightReplacementLEDCornLight
-              </p>
+                50W 8000lm Compact Size for HID Street Light Replacement LEDCornLight
+              </p></div>
               <a class="special__link" href="#">View More
-                <svg class="top-slider__icon" width="22" height="9">
+                <svg class="special__icon" width="22" height="9">
                   <use xlink:href="images/icons/sprite/svg/sprite.symbol.svg#link-arrow"></use>
                 </svg>
               </a>
@@ -511,7 +512,7 @@
     <section class="design" data-ref="design">
       <div class="container">
         <div class="design__inner">
-          <h2 class="title">
+          <h2 class="title design__title">
             New Design
           </h2>
           <ul class="design__list">
@@ -535,11 +536,11 @@
         <div class="design__content">
           <a class="design__item mix category-4" href="#">
             <div class="design__text">
-              <h3 class="design__title">
+              <h3 class="design__subtitle">
                 Beat Flat Pendant
                 Black
               </h3>
-              <p class="design__subtitle">
+              <p class="design__category">
                 Classic
               </p>
             </div>
@@ -548,11 +549,11 @@
           <a class="design__item mix category-1" href="#">
             <span class="sr-only">Link with item</span>
             <div class="design__text">
-              <h3 class="design__title">
+              <h3 class="design__subtitle">
                 Lampe Sur Pieds
                 Bamboo
               </h3>
-              <p class="design__subtitle">
+              <p class="design__category">
                 Classic
               </p>
             </div>
@@ -561,11 +562,11 @@
           <a class="design__item mix category-2" href="#">
             <span class="sr-only">Link with item</span>
             <div class="design__text">
-              <h3 class="design__title">
+              <h3 class="design__subtitle">
                 Rattan Rocking
                 Chair
               </h3>
-              <p class="design__subtitle">
+              <p class="design__category">
                 Classic
               </p>
             </div>
@@ -575,11 +576,11 @@
           <a class="design__item mix category-2" href="#">
             <span class="sr-only">Link with item</span>
             <div class="design__text">
-              <h3 class="design__title">
+              <h3 class="design__subtitle">
                 Rattan Rocking
                 Chair
               </h3>
-              <p class="design__subtitle">
+              <p class="design__category">
                 Classic
               </p>
             </div>
@@ -588,11 +589,11 @@
           <a class="design__item mix category-1" href="#">
             <span class="sr-only">Link with item</span>
             <div class="design__text">
-              <h3 class="design__title">
+              <h3 class="design__subtitle">
                 Rattan Rocking
                 Chair
               </h3>
-              <p class="design__subtitle">
+              <p class="design__category">
                 Classic
               </p>
             </div>
@@ -602,11 +603,11 @@
           <a class="design__item mix category-3" href="#">
             <span class="sr-only">Link with item</span>
             <div class="design__text">
-              <h3 class="design__title">
+              <h3 class="design__subtitle">
                 Lampe Sur Pieds
                 Bamboo
               </h3>
-              <p class="design__subtitle">
+              <p class="design__category">
                 Classic
               </p>
             </div>
@@ -704,33 +705,33 @@
 
     <div class="partners">
       <div class="container">
-        <div class="partners__slider">
-          <a class="partner__image" href="#">
-            <img class="partner__img" src="images/content/partners/1.png" alt="partner image" width="82" height="84">
+        <div class="partners__slider partners__slider--968px">
+          <a class="partners__image" href="#">
+            <img class="partners__img" src="images/content/partners/1.png" alt="partner image" width="82" height="84">
           </a>
-          <a class="partner__image" href="#">
-            <img class="partner__img" src="images/content/partners/2.png" alt="partner image" width="151" height="48">
+          <a class="partners__image" href="#">
+            <img class="partners__img" src="images/content/partners/2.png" alt="partner image" width="151" height="48">
           </a>
-          <a class="partner__image" href="#">
-            <img class="partner__img" src="images/content/partners/3.png" alt="partner image" width="150" height="77">
+          <a class="partners__image" href="#">
+            <img class="partners__img" src="images/content/partners/3.png" alt="partner image" width="150" height="77">
           </a>
-          <a class="partner__image" href="#">
-            <img class="partner__img" src="images/content/partners/4.png" alt="partner image" width="167" height="52">
+          <a class="partners__image" href="#">
+            <img class="partners__img" src="images/content/partners/4.png" alt="partner image" width="167" height="52">
           </a>
-          <a class="partner__image" href="#">
-            <img class="partner__img" src="images/content/partners/5.png" alt="partner image" width="87" height="66">
+          <a class="partners__image" href="#">
+            <img class="partners__img" src="images/content/partners/5.png" alt="partner image" width="87" height="66">
           </a>
-          <a class="partner__image" href="#">
-            <img class="partner__img" src="images/content/partners/4.png" alt="partner image" width="167" height="52">
+          <a class="partners__image" href="#">
+            <img class="partners__img" src="images/content/partners/4.png" alt="partner image" width="167" height="52">
           </a>
-          <a class="partner__image" href="#">
-            <img class="partner__img" src="images/content/partners/3.png" alt="partner image" width="150" height="77">
+          <a class="partners__image" href="#">
+            <img class="partners__img" src="images/content/partners/3.png" alt="partner image" width="150" height="77">
           </a>
-          <a class="partner__image" href="#">
-            <img class="partner__img" src="images/content/partners/1.png" alt="partner image" width="82" height="84">
+          <a class="partners__image" href="#">
+            <img class="partners__img" src="images/content/partners/1.png" alt="partner image" width="82" height="84">
           </a>
-          <a class="partner__image" href="#">
-            <img class="partner__img" src="images/content/partners/2.png" alt="partner image" width="151" height="48">
+          <a class="partners__image" href="#">
+            <img class="partners__img" src="images/content/partners/2.png" alt="partner image" width="151" height="48">
           </a>
         </div>
       </div>
@@ -800,7 +801,7 @@
             </li>
           </ul>
         </div>
-        <div class="footer-top__part">
+        <div class="footer-top__item footer-top__part">
           <h2 class="footer-top__title">newsletter</h2>
           <p class="footer-top__part-text">
             Subscribe by our newsletter and get

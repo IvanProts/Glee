@@ -9,11 +9,12 @@
     background-position: center center;
     background-repeat: no-repeat;
     min-height: 500px;
-    transition: all 0.3s;
+    transition: transform 0.3s;
   }
 
   &__link {
     position: relative;
+    display: flex;
     z-index: 2;
     transition: transform 0.3s;
     &::after{
@@ -24,7 +25,7 @@
       width: 98px;
       height: 98px;
       z-index: -1;
-      top: -33px;
+      top: -38px;
       left: -37px;
     }
     &::before{
@@ -36,7 +37,7 @@
       height: 127px;
       opacity: 0.4;
       z-index: -1;
-      top: -47px;
+      top: -52px;
       left: -51px;
     }
     &:hover{
@@ -46,5 +47,12 @@
 
   &__icon {
     fill: $white;
+  }
+
+  @include r(768){
+    padding-bottom: 30px;
+    &__popup{
+      min-height: 320px;
+    }
   }
 }

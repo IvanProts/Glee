@@ -11,6 +11,12 @@
     top: -250px;
     left: 0;
   }
+  @include r(968){
+    &__wrap{
+      height: 240px;
+      top: -75px;
+    }
+  }
 }
 
 .slick-initialized .slick-slide {

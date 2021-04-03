@@ -50,11 +50,11 @@
   }
   &__item{
     background-color: $alabaster;
-    padding: 40px 0 40px 35px;
+    padding: 40px 35px;
     position: relative;
-    transition: transform 0.3s;
+    transition: box-shadow 0.3s;
     &:hover{
-      transform: scale(1.1);
+      box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.2);
     }
   }
   &__text{
@@ -65,12 +65,12 @@
     position: relative;
   }
 
-  &__title{
+  &__subtitle{
     font-size: 20px;
     color: $title--dark;
     margin-bottom: 20px;
   }
-  &__subtitle{
+  &__category{
     font-size: 16px;
     color: $casper;
   }
@@ -84,5 +84,57 @@
       top: 15%;
       right: 10%;
     }
+  }
+  @include r(1200){
+    &__item{
+      padding: 25px 20px;
+    }
+    &__subtitle{
+      font-size: 18px;
+    }
+    &__category{
+      font-size: 14px;
+    }
+  }
+  @include r(968){
+    padding-bottom: 80px;
+    &__content {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(3, 245px);
+    }
+  }
+  @include r(768){
+    padding-bottom: 40px;
+    &__list{
+      margin-bottom: 20px;
+    }
+    &__content {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: repeat(6, 245px);
+      justify-items: center;
+    }
+    &__item{
+      width: 300px;
+    }
+  }
+  @include r(440){
+    padding-bottom: 20px;
+    &__title{
+      font-size: 30px;
+      margin-bottom: 15px;
+    }
+  }
+  &__button {
+    &:not(:last-child) {
+      margin-right: 15px;
+    }
+  }
+  &__btn {
+    font-size: 14px;
+  }
+  &__img{
+    padding: 0 5px;
   }
 }
