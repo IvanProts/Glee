@@ -1,5 +1,6 @@
 .special {
   padding-bottom: 95px;
+
   &__content {
     display: flex;
     justify-content: space-between;
@@ -23,23 +24,26 @@
     margin-right: 1vh;
   }
 
+  &__text {
+    max-width: 345px;
+  }
+
   &__title {
     @extend %dmsans-700;
-    max-width: 345px;
     font-size: 26px;
     line-height: 1.2;
     color: $blue-dianne;
     margin-bottom: 15px;
-    @include text-clamp;
+    @include text-clamp--large;
   }
 
   &__descr {
     font-size: 16px;
     line-height: 1.8;
     color: $blue-dianne;
-    max-width: 345px;
     margin-bottom: 35px;
-    @include text-clamp;
+    @include text-clamp--large;
+    overflow: hidden;
   }
 
 
@@ -62,6 +66,54 @@
 
     & svg {
       margin-left: 45px;
+      fill: $blue-light;
+    }
+  }
+
+  @include r(1200) {
+    padding-bottom: 0;
+    &__content {
+      flex-direction: column;
+    }
+
+    &__offer {
+      margin-bottom: 65px;
+      padding: 0 5px;
+
+      &:nth-child(1) {
+        margin-right: 0;
+      }
+    }
+
+    &__img {
+      width: 170px;
+      height: 310px;
+    }
+  }
+
+  @include r(440) {
+    &__offer{
+      margin-bottom: 30px;
+    }
+    &__img{
+      height: 250px;
+      margin-top: -8%;
+    }
+    &__title {
+      font-size: 22px;
+    }
+
+    &__descr {
+      font-size: 14px;
+    }
+
+    &__link {
+      padding: 10px;
+      font-size: 14px;
+
+      & svg {
+        margin-left: 10px;
+      }
     }
   }
 }

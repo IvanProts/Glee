@@ -1,15 +1,58 @@
-.video{
+.video {
   padding-bottom: 120px;
-  &__popup{
+
+  &__popup {
     display: flex;
     justify-content: center;
     align-items: center;
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    max-height: 500px;
+    min-height: 500px;
+    transition: transform 0.3s;
   }
-  &__link{
-    padding: 11% 45%;
+
+  &__link {
+    position: relative;
+    display: flex;
+    z-index: 2;
+    transition: transform 0.3s;
+    &::after{
+      content: " ";
+      position: absolute;
+      background-color: $casper;
+      border-radius: 50%;
+      width: 98px;
+      height: 98px;
+      z-index: -1;
+      top: -38px;
+      left: -37px;
+    }
+    &::before{
+      content: " ";
+      position: absolute;
+      background-color: $casper;
+      border-radius: 50%;
+      width: 127px;
+      height: 127px;
+      opacity: 0.4;
+      z-index: -1;
+      top: -52px;
+      left: -51px;
+    }
+    &:hover{
+      transform: scale(1.2);
+    }
+  }
+
+  &__icon {
+    fill: $white;
+  }
+
+  @include r(768){
+    padding-bottom: 30px;
+    &__popup{
+      min-height: 320px;
+    }
   }
 }

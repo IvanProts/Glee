@@ -55,7 +55,6 @@ function browsersync() {
   })
 }
 
-
 function styles() {
   return src('app/scss/style.scss')
     .pipe(scss({

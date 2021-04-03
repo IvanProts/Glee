@@ -1,6 +1,6 @@
 .partners{
   position: relative;
-  padding: 0 50px 90px 50px;
+  padding: 0 50px 90px;
 
   &__wrap {
     position: absolute;
@@ -10,6 +10,12 @@
     height: 430px;
     top: -250px;
     left: 0;
+  }
+  @include r(968){
+    &__wrap{
+      height: 240px;
+      top: -75px;
+    }
   }
 }
 
