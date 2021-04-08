@@ -40,42 +40,52 @@
             <a class="menu__link" href="#">Contact</a>
           </li>
         </ul>
-        <ul class="user-menu">
-          <li class="user-menu__item">
-            <button class="user-menu__btn user-menu__search" type="button">
-              <span class="sr-only">Search button</span>
-              <svg class="user-menu__icon user-menu--icon1">
-                <use xlink:href="images/icons/sprite/svg/sprite.symbol.svg#user-search"></use>
-              </svg>
-            </button>
-          </li>
-          <li class="user-menu__item">
-            <div class="user-menu__preferences">
-              <a class="user-menu__btn user-menu__liked" href="#">
-                <span class="sr-only">Link with your preferences</span>
-                <svg class="user-menu__icon user-menu--icon2">
-                  <use xlink:href="images/icons/sprite/svg/sprite.symbol.svg#user-like"></use>
+        <div class="menu-box">
+          <button class="menu-btn">
+            <span class="sr-only">This button opens menu</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="18" viewBox="0 0 30 18" fill="none">
+              <path d="M0 0H30V2H0V0Z" fill="#fff"></path>
+              <path d="M0 8H30V10H0V8Z" fill="#fff"></path>
+              <rect y="16" width="30" height="2" fill="#fff"></rect>
+            </svg>
+          </button>
+          <ul class="user-menu">
+            <li class="user-menu__item">
+              <button class="user-menu__btn user-menu__search" type="button">
+                <span class="sr-only">Search button</span>
+                <svg class="user-menu__icon user-menu--icon1">
+                  <use xlink:href="images/icons/sprite/svg/sprite.symbol.svg#user-search"></use>
                 </svg>
-                <span class="user-menu__num">0</span>
-              </a>
-              <a class="user-menu__btn user-menu__card" href="#">
-                <span class="sr-only">Link with your card</span>
-                <svg class="user-menu__icon user-menu--icon3">
-                  <use xlink:href="images/icons/sprite/svg/sprite.symbol.svg#user-cart"></use>
+              </button>
+            </li>
+            <li class="user-menu__item">
+              <div class="user-menu__preferences">
+                <a class="user-menu__btn user-menu__liked" href="#">
+                  <span class="sr-only">Link with your preferences</span>
+                  <svg class="user-menu__icon user-menu--icon2">
+                    <use xlink:href="images/icons/sprite/svg/sprite.symbol.svg#user-like"></use>
+                  </svg>
+                  <span class="user-menu__num">0</span>
+                </a>
+                <a class="user-menu__btn user-menu__card" href="#">
+                  <span class="sr-only">Link with your card</span>
+                  <svg class="user-menu__icon user-menu--icon3">
+                    <use xlink:href="images/icons/sprite/svg/sprite.symbol.svg#user-cart"></use>
+                  </svg>
+                  <span class="user-menu__num">0</span>
+                </a>
+              </div>
+            </li>
+            <li class="user-menu__item">
+              <button class="user-menu__btn user-menu__items" type="button">
+                <span class="sr-only">This button opens user menu</span>
+                <svg class="user-menu__icon user-menu--icon4">
+                  <use xlink:href="images/icons/sprite/svg/sprite.symbol.svg#user-items"></use>
                 </svg>
-                <span class="user-menu__num">0</span>
-              </a>
-            </div>
-          </li>
-          <li class="user-menu__item">
-            <button class="user-menu__btn user-menu__items" type="button">
-              <span class="sr-only">This button opens navigation menu</span>
-              <svg class="user-menu__icon user-menu--icon4">
-                <use xlink:href="images/icons/sprite/svg/sprite.symbol.svg#user-items"></use>
-              </svg>
-            </button>
-          </li>
-        </ul>
+              </button>
+            </li>
+          </ul>
+        </div>
       </nav>
     </div>
   </header>
@@ -92,8 +102,8 @@
                   smart and
                   trendy
                 </h3>
-                <div class="top-slider__part">
-                  <p class="top-slider__text">
+                <div class="top-slider__text">
+                  <p>
                     Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
                   </p>
                 </div>
@@ -114,8 +124,8 @@
                   smart and
                   trendy
                 </h3>
-                <div class="top-slider__part">
-                  <p class="top-slider__text">
+                <div class="top-slider__text">
+                  <p>
                     Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
                   </p>
                 </div>
@@ -136,8 +146,8 @@
                   smart and
                   trendy
                 </h3>
-                <div class="top-slider__part">
-                  <p class="top-slider__text">
+                <div class="top-slider__text">
+                  <p>
                     Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
                   </p>
                 </div>
@@ -156,25 +166,25 @@
         </div>
         <div class="benefits">
           <ul class="benefits__list">
-            <li class="benefits__item benefits__item-icon1">
+            <li class="benefits__item benefits__item--icon1">
               <h3 class="benefits__title ">Support 24/7.</h3>
               <div class="benefits__text">
-                <p class="benefits__descr">
+                <p>
                   Contact us 24 hours a day,
                   7 days a week</p>
               </div>
             </li>
-            <li class="benefits__item benefits__item-icon2">
+            <li class="benefits__item benefits__item--icon2">
               <h3 class="benefits__title">Delivery.</h3>
               <div class="benefits__text">
-                <p class="benefits__descr">
+                <p>
                   Free shipping on all US order.</p>
               </div>
             </li>
-            <li class="benefits__item benefits__item-icon3">
+            <li class="benefits__item benefits__item--icon3">
               <h3 class="benefits__title">100% Payment secure.</h3>
               <div class="benefits__text">
-                <p class="benefits__descr">
+                <p>
                   We ensure secure payment
                   with PEV.</p>
               </div>
@@ -474,9 +484,10 @@
                 </p>
               </div>
               <div class="special__part">
-              <p class="special__descr">
-                LEDCornBulb Lamp 5W 7W 10W 12W 15W E26 E27LEDCornLight
-              </p></div>
+                <p class="special__descr">
+                  LEDCornBulb Lamp 5W 7W 10W 12W 15W E26 E27LEDCornLight
+                </p>
+              </div>
               <a class="special__link" href="#">View More
                 <svg class="special__icon" width="22" height="9">
                   <use xlink:href="images/icons/sprite/svg/sprite.symbol.svg#link-arrow"></use>
@@ -495,9 +506,10 @@
                 </p>
               </div>
               <div class="special__part">
-              <p class="special__descr">
-                50W 8000lm Compact Size for HID Street Light Replacement LEDCornLight
-              </p></div>
+                <p class="special__descr">
+                  50W 8000lm Compact Size for HID Street Light Replacement LEDCornLight
+                </p>
+              </div>
               <a class="special__link" href="#">View More
                 <svg class="special__icon" width="22" height="9">
                   <use xlink:href="images/icons/sprite/svg/sprite.symbol.svg#link-arrow"></use>
@@ -621,9 +633,11 @@
       <div class="video__popup" style="background-image: url(../images/video-bg.jpg);">
         <a class="video__link" data-fancybox href="https://youtu.be/mb8s4Hsqzyw">
           <span class="sr-only">Link redirect you to the video</span>
-          <svg class="video__icon" width="25" height="22">
-            <use xlink:href="images/icons/sprite/svg/sprite.symbol.svg#play"></use>
-          </svg>
+          <div class="video__btn">
+            <svg class="video__icon" width="25" height="22">
+              <use xlink:href="images/icons/sprite/svg/sprite.symbol.svg#play"></use>
+            </svg>
+          </div>
         </a>
       </div>
     </div>
@@ -647,16 +661,16 @@
             <p class="blog__category">
               news
             </p>
-            <a class="blog__descr" href="#">
+            <h3 class="blog__descr" href="#">
               Diusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
-            </a>
+            </h3>
             <div class="blog__info">
               <time datetime="28-01-2020" class="blog__data">
                 28 january, 2020
               </time>
-              <a class="blog__author" href="#">
+              <span class="blog__author" href="#">
                 by admin
-              </a>
+              </span>
             </div>
           </article>
           <article class="blog__item" href="#">
@@ -667,16 +681,16 @@
             <p class="blog__category">
               news
             </p>
-            <a class="blog__descr" href="#">
+            <h3 class="blog__descr" href="#">
               Aonsectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-            </a>
+            </h3>
             <div class="blog__info">
               <time datetime="28-01-2020" class="blog__data">
                 28 january, 2020
               </time>
-              <a class="blog__author" href="#">
+              <span class="blog__author" href="#">
                 by admin
-              </a>
+              </span>
             </div>
           </article>
           <article class="blog__item" href="#">
@@ -687,16 +701,16 @@
             <p class="blog__category">
               news
             </p>
-            <a class="blog__descr" href="#">
+            <h3 class="blog__descr" href="#">
               Rncididunt ut labore et dolore magna aliqua. Ut enim
-            </a>
+            </h3>
             <div class="blog__info">
               <time datetime="28-01-2020" class="blog__data">
                 28 january, 2020
               </time>
-              <a class="blog__author" href="#">
+              <span class="blog__author" href="#">
                 by admin
-              </a>
+              </span>
             </div>
           </article>
         </div>

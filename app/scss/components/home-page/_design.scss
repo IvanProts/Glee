@@ -1,7 +1,27 @@
-.design{
+.design {
   padding-bottom: 120px;
-  &__inner{
+
+  @include r(968) {
+    padding-bottom: 80px;
+  }
+
+  @include r(767) {
+    padding-bottom: 40px;
+  }
+
+  @include r(440) {
+    padding-bottom: 20px;
+  }
+
+  &__inner {
     text-align: center;
+  }
+
+  &__title {
+    @include r(440) {
+      font-size: 30px;
+      margin-bottom: 15px;
+    }
   }
 
   &__list {
@@ -9,11 +29,20 @@
     justify-content: center;
     align-items: center;
     margin-bottom: 65px;
+
+    @include r(767) {
+      margin-bottom: 20px;
+    }
   }
 
   &__button {
     &:not(:last-child) {
       margin-right: 30px;
+    }
+    @include r(440){
+      &:not(:last-child) {
+        margin-right: 15px;
+      }
     }
   }
 
@@ -39,6 +68,9 @@
     &:active {
       opacity: 0.8;
     }
+    @include r(440){
+       font-size: 14px;
+    }
   }
 
   &__content {
@@ -47,17 +79,41 @@
     grid-template-rows: repeat(2, 245px);
     grid-row-gap: 35px;
     grid-column-gap: 30px;
+
+    @include r(968) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(3, 245px);
+    }
+
+    @include r(767) {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: repeat(6, 245px);
+      justify-items: center;
+    }
   }
-  &__item{
+
+  &__item {
     background-color: $alabaster;
     padding: 40px 35px;
     position: relative;
     transition: box-shadow 0.3s;
-    &:hover{
+
+    &:hover {
       box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.2);
     }
+
+    @include r(1200) {
+      padding: 25px 20px;
+    }
+
+    @include r(767) {
+      width: 300px;
+    }
   }
-  &__text{
+
+  &__text {
     z-index: 2;
     @extend %dmsans-700;
     max-width: 175px;
@@ -65,76 +121,37 @@
     position: relative;
   }
 
-  &__subtitle{
+  &__subtitle {
     font-size: 20px;
     color: $title--dark;
     margin-bottom: 20px;
-  }
-  &__category{
-    font-size: 16px;
-    color: $casper;
+
+    @include r(1200) {
+      font-size: 18px;
+    }
   }
 
-  &__img{
+  &__category {
+    font-size: 16px;
+    color: $casper;
+
+    @include r(1200) {
+      font-size: 14px;
+    }
+  }
+
+  &__img {
     position: absolute;
     top: 0;
     right: 0;
     z-index: 1;
-    &--pos{
+
+    &--pos {
       top: 15%;
       right: 10%;
     }
-  }
-  @include r(1200){
-    &__item{
-      padding: 25px 20px;
+    @include r(440){
+      padding: 0 5px;
     }
-    &__subtitle{
-      font-size: 18px;
-    }
-    &__category{
-      font-size: 14px;
-    }
-  }
-  @include r(968){
-    padding-bottom: 80px;
-    &__content {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: repeat(3, 245px);
-    }
-  }
-  @include r(768){
-    padding-bottom: 40px;
-    &__list{
-      margin-bottom: 20px;
-    }
-    &__content {
-      display: grid;
-      grid-template-columns: repeat(1, 1fr);
-      grid-template-rows: repeat(6, 245px);
-      justify-items: center;
-    }
-    &__item{
-      width: 300px;
-    }
-  }
-  @include r(440){
-    padding-bottom: 20px;
-    &__title{
-      font-size: 30px;
-      margin-bottom: 15px;
-    }
-  }
-  &__button {
-    &:not(:last-child) {
-      margin-right: 15px;
-    }
-  }
-  &__btn {
-    font-size: 14px;
-  }
-  &__img{
-    padding: 0 5px;
   }
 }

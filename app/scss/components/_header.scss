@@ -2,44 +2,13 @@
   padding: 45px 0;
 
   @include r(1200) {
+    padding: 20px 0;
+
     .logo__img {
       width: 120px;
       height: 32px;
     }
 
-    .menu {
-      font-size: 12px;
-      padding: 0 15px;
-      margin-left: 0;
-
-      &__item:not(:last-child) {
-        padding-right: 2vw;
-      }
-    }
-
-    .user-menu {
-      &__btn {
-        width: 40px;
-        height: 40px;
-      }
-
-      &__icon {
-        width: 15px;
-        height: 15px;
-      }
-
-      &__num {
-        width: 10px;
-        height: 10px;
-        top: 9px;
-        right: 23px;
-        line-height: 1.2;
-      }
-    }
-  }
-
-  @include r(768) {
-    padding: 30px;
     .menu {
       position: absolute;
       top: 0;
@@ -48,10 +17,11 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-      background-color: $light-apricot;
+      background-color: $provincial-pink;
       text-align: center;
       height: 100%;
       padding: 0;
+      margin-left: 0;
       transform: translateY(-150%);
       transition: transform 0.5s;
 
@@ -60,20 +30,46 @@
         z-index: 2;
       }
 
-      &__item {
-        padding: 6vw 3vw;
-      }
-
       &__item:not(:last-child) {
-        padding-right: 3vw;
+        padding-right: 0;
       }
 
       &__link {
         display: block;
         font-size: 20px;
+        padding: 4vh 3vw;
 
         & span {
           display: none;
+        }
+      }
+    }
+
+    .menu-box {
+      display: flex;
+    }
+
+    .user-menu {
+      &__item:not(:last-child) {
+        display: none;
+      }
+
+      &--active {
+        .user-menu__item {
+          display: block;
+        }
+
+        .user-menu--icon4 {
+          & use {
+            display: none;
+          }
+
+          background-image: url('../images/icons/cross.svg');
+          height: 25px;
+          width: 25px;
+          background-size: cover;
+          background-position: center center;
+          background-repeat: no-repeat;
         }
       }
     }
@@ -81,10 +77,36 @@
 
   @include r (440) {
     padding: 20px 0;
+
     .user-menu {
-      &__btn {
-        width: 35px;
-        height: 35px;
+      position: relative;
+
+      &--active {
+        position: absolute;
+        flex-direction: column-reverse;
+        top: 20px;
+        right: 15px;
+        align-items: baseline;
+
+        .user-menu__btn {
+          margin-bottom: 10px;
+          background-color: $casper;
+        }
+
+        .user-menu__preferences {
+          flex-direction: column-reverse;
+        }
+
+        .user-menu__liked,
+        .user-menu__card {
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+        }
+
+        .user-menu__liked::after {
+          display: none;
+        }
       }
     }
   }
@@ -103,6 +125,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 50px;
   }
 }
 
@@ -132,6 +155,7 @@
 .user-menu {
   display: flex;
   justify-content: space-between;
+  z-index: 22;
 
   &__btn {
     @include btn-cirkle;
@@ -238,5 +262,28 @@
     background-color: $casper;
     border-radius: 50%;
     z-index: 3;
+  }
+}
+
+.menu-btn {
+  display: none;
+
+  @include r(1200) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: none;
+    z-index: 22;
+    background-color: $casper;
+  }
+
+  @include r(440) {
+    position: absolute;
+    top: 20px;
+    right: 60px;
   }
 }

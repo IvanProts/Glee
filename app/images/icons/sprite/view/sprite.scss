@@ -22,6 +22,16 @@
 	height: 58.67px;
 }
 
+.svg-cross {
+	@extend %svg-common;
+	background-position: 42.95302013422819% 40.043956043956044%;
+}
+
+.svg-cross-dims {
+	width: 20px;
+	height: 20px;
+}
+
 .svg-delivery {
 	@extend %svg-common;
 	background-position: 55.53145336225597% 0;

@@ -1,4 +1,4 @@
-.partners{
+.partners {
   position: relative;
   padding: 0 50px 90px;
 
@@ -10,9 +10,8 @@
     height: 430px;
     top: -250px;
     left: 0;
-  }
-  @include r(968){
-    &__wrap{
+
+    @include r(968) {
       height: 240px;
       top: -75px;
     }
@@ -24,7 +23,7 @@
   justify-content: space-evenly;
 }
 
-.slick-slider .slick-track{
+.slick-slider .slick-track {
   display: flex;
   align-items: center;
 }

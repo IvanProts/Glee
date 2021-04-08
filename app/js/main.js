@@ -36,7 +36,12 @@ $(function () {
   });
 
   $('.user-menu__items').on('click', function () {
+    $('.user-menu').toggleClass('user-menu--active');
+  });
+
+  $('.menu-btn').on('click', function () {
     $('.menu').toggleClass('menu--active');
+    $('.menu-btn').toggleClass('menu-btn--active');
   });
 
   var product1 = document.querySelector('[data-ref="product"]');
