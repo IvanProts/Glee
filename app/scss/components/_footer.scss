@@ -34,7 +34,8 @@
     }
   }
 
-  &__contacts {
+  &__contacts,
+  &__nav {
     max-width: 200px;
   }
 
@@ -46,10 +47,6 @@
 
   &__text {
     text-transform: uppercase;
-  }
-
-  &__nav {
-    max-width: 200px;
   }
 
   &__part {

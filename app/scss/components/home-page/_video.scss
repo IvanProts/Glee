@@ -36,11 +36,15 @@
   &__btn {
     position: relative;
 
-    &::after {
+    &::after,
+    &::before {
       content: " ";
       position: absolute;
       background-color: $casper;
       border-radius: 50%;
+    }
+
+    &::after { 
       width: 98px;
       height: 98px;
       z-index: -1;
@@ -49,10 +53,6 @@
     }
 
     &::before {
-      content: " ";
-      position: absolute;
-      background-color: $casper;
-      border-radius: 50%;
       width: 127px;
       height: 127px;
       opacity: 0.4;

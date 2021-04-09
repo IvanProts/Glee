@@ -3,13 +3,83 @@
 
   @include r(1200) {
     padding: 20px 0;
+  }
 
-    .logo__img {
+  @include r(440) {
+    padding: 20px 0;
+  }
+
+  .logo__img {
+    @include r(1200) {
       width: 120px;
       height: 32px;
     }
+  }
 
-    .menu {
+  &__logo {
+    transition: transform 0.3s;
+    position: relative;
+    z-index: 3;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+  }
+
+  .menu {
+    display: flex;
+    margin-left: 8vw;
+
+    &__item:not(:last-child) {
+      padding-right: 35px;
+    }
+
+    &__link {
+      display: inline-block;
+      font-size: 15px;
+      line-height: 1;
+      color: $blue-light;
+      transition: opacity 0.3s;
+      outline-color: $blue-dianne;
+      @extend %rubik-500;
+
+
+
+      &:hover {
+        opacity: 0.8;
+      }
+
+      @include r(1200) {
+        display: block;
+        font-size: 24px;
+        padding: 5vh 3vw;
+
+        & span {
+          display: none;
+        }
+      }
+      @include r(968){
+        font-size: 20px;
+        padding: 4vh 3vw;
+      }
+    }
+
+    &__item {
+      @include r(1200) {
+        &:not(:last-child) {
+          padding-right: 0;
+        }
+      }
+    }
+
+    @include r(1200) {
       position: absolute;
       top: 0;
       left: 0;
@@ -29,27 +99,122 @@
         transform: translateY(0%);
         z-index: 2;
       }
+    }
+  }
 
-      &__item:not(:last-child) {
-        padding-right: 0;
+  .user-menu {
+    display: flex;
+    justify-content: space-between;
+    z-index: 22;
+
+    &__btn {
+      @include btn-cirkle;
+      width: 50px;
+      height: 50px;
+      outline-color: $blue-light;
+      cursor: pointer;
+      transition: opacity 0.3s;
+
+      &:hover,
+      &:active {
+        opacity: 0.8;
       }
 
-      &__link {
-        display: block;
-        font-size: 20px;
-        padding: 4vh 3vw;
-
-        & span {
-          display: none;
-        }
+      &:focus {
+        border: 1px solid $blue-dianne;
       }
     }
 
-    .menu-box {
+    &__icon {
+      fill: $blue-dianne;
+    }
+
+    &--icon1 {
+      width: 16px;
+      height: 16px;
+    }
+
+    &--icon2 {
+      width: 18px;
+      height: 16px;
+    }
+
+    &--icon3 {
+      width: 19px;
+      height: 17px;
+    }
+
+    &--icon4 {
+      width: 20px;
+      height: 20px;
+      fill: $white
+    }
+
+    &__search {
+      margin-right: 1vw;
+      background-color: $mystic;
+    }
+
+    &__preferences {
       display: flex;
+      align-items: center;
+      margin-right: 1vw;
     }
 
-    .user-menu {
+    &__liked,
+    &__card {
+      position: relative;
+      width: 90px;
+      height: 50px;
+      background-color: $light-apricot;
+      border-radius: 0;
+      z-index: 1;
+    }
+
+    &__liked {
+      border-top-left-radius: 25px;
+      border-bottom-left-radius: 25px;
+
+      &::after {
+        content: "|";
+        position: absolute;
+        height: 32px;
+        color: transparent;
+        background-color: $white;
+        opacity: 0.4;
+        right: 0;
+      }
+    }
+
+
+    &__card {
+      border-top-right-radius: 25px;
+      border-bottom-right-radius: 25px;
+    }
+
+    &__num {
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background-color: $white;
+      top: 9px;
+      right: 26px;
+      color: $blue-dianne;
+      text-align: center;
+      font-size: 10px;
+      line-height: 1.7;
+      @extend %dmsans-400;
+    }
+
+    &__items {
+      position: relative;
+      background-color: $casper;
+      border-radius: 50%;
+      z-index: 3;
+    }
+
+    @include r(1200) {
       &__item:not(:last-child) {
         display: none;
       }
@@ -73,12 +238,8 @@
         }
       }
     }
-  }
 
-  @include r (440) {
-    padding: 20px 0;
-
-    .user-menu {
+    @include r(440) {
       position: relative;
 
       &--active {
@@ -110,60 +271,28 @@
       }
     }
   }
+}
 
-  &__logo {
-    transition: transform 0.3s;
-    position: relative;
-    z-index: 3;
-
-    &:hover {
-      transform: scale(1.2);
+  .menu-box {
+    @include r(1200) {
+      display: flex;
     }
   }
 
-  &__nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 50px;
-  }
-}
+  .menu-btn {
+    display: none;
+    outline: $blue-dianne;
 
-.menu {
-  display: flex;
-  margin-left: 8vw;
+    &--active {
+      background-image: url('../images/icons/cross.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
 
-  &__item:not(:last-child) {
-    padding-right: 35px;
-  }
-
-  &__link {
-    display: inline-block;
-    font-size: 15px;
-    line-height: 1;
-    color: $blue-light;
-    transition: opacity 0.3s;
-    outline-color: $blue-dianne;
-    @extend %rubik-500;
-
-    &:hover {
-      opacity: 0.8;
+      & svg {
+        display: none;
+      }
     }
-  }
-}
-
-.user-menu {
-  display: flex;
-  justify-content: space-between;
-  z-index: 22;
-
-  &__btn {
-    @include btn-cirkle;
-    width: 50px;
-    height: 50px;
-    outline-color: $blue-light;
-    cursor: pointer;
-    transition: opacity 0.3s;
 
     &:hover,
     &:active {
@@ -173,117 +302,23 @@
     &:focus {
       border: 1px solid $blue-dianne;
     }
-  }
 
-  &__icon {
-    fill: $blue-dianne;
-  }
+    @include r(1200) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 10px;
+      height: 50px;
+      width: 50px;
+      border-radius: 50%;
+      border: none;
+      z-index: 22;
+      background-color: $casper;
+    }
 
-  &--icon1 {
-    width: 16px;
-    height: 16px;
-  }
-
-  &--icon2 {
-    width: 18px;
-    height: 16px;
-  }
-
-  &--icon3 {
-    width: 19px;
-    height: 17px;
-  }
-
-  &--icon4 {
-    width: 20px;
-    height: 20px;
-    fill: $white
-  }
-
-  &__search {
-    margin-right: 1vw;
-    background-color: $mystic;
-  }
-
-  &__preferences {
-    display: flex;
-    align-items: center;
-    margin-right: 1vw;
-  }
-
-  &__liked,
-  &__card {
-    position: relative;
-    width: 90px;
-    height: 50px;
-    background-color: $light-apricot;
-    border-radius: 0;
-    z-index: 1;
-  }
-
-  &__liked {
-    border-top-left-radius: 25px;
-    border-bottom-left-radius: 25px;
-
-    &::after {
-      content: "|";
+    @include r(440) {
       position: absolute;
-      height: 32px;
-      color: transparent;
-      background-color: $white;
-      opacity: 0.4;
-      right: 0;
+      top: 20px;
+      right: 60px;
     }
   }
-
-
-  &__card {
-    border-top-right-radius: 25px;
-    border-bottom-right-radius: 25px;
-  }
-
-  &__num {
-    position: absolute;
-    width: 16px;
-    height: 16px;
-    border-radius: 50%;
-    background-color: $white;
-    top: 9px;
-    right: 26px;
-    color: $blue-dianne;
-    text-align: center;
-    font-size: 10px;
-    line-height: 1.7;
-    @extend %dmsans-400;
-  }
-
-  &__items {
-    position: relative;
-    background-color: $casper;
-    border-radius: 50%;
-    z-index: 3;
-  }
-}
-
-.menu-btn {
-  display: none;
-
-  @include r(1200) {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-right: 10px;
-    height: 50px;
-    width: 50px;
-    border-radius: 50%;
-    border: none;
-    z-index: 22;
-    background-color: $casper;
-  }
-
-  @include r(440) {
-    position: absolute;
-    top: 20px;
-    right: 60px;
-  }
-}
