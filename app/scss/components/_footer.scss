@@ -5,6 +5,25 @@
   padding: 70px 0;
   border-bottom: 1px solid $mystic;
 
+  @include r(767) {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 30px 0;
+  }
+
+  &__item {
+    @include r(767) {
+      padding: 20px;
+    }
+  }
+
+  &__item:not(:last-child) {
+    @include r(767) {
+      border-bottom: 1px solid $port-gore;
+    }
+  }
+
   &__logo {
     display: flex;
     margin-bottom: 25px;
@@ -15,7 +34,8 @@
     }
   }
 
-  &__contacts {
+  &__contacts,
+  &__nav {
     max-width: 200px;
   }
 
@@ -27,10 +47,6 @@
 
   &__text {
     text-transform: uppercase;
-  }
-
-  &__nav {
-    max-width: 200px;
   }
 
   &__part {
@@ -46,6 +62,10 @@
     &:hover {
       color: $title--dark;
     }
+  }
+
+  &__mail {
+    display: block;
   }
 
   &__title {
@@ -102,21 +122,6 @@
       opacity: 0.8;
     }
   }
-
-  @include r(768) {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 30px 0;
-
-    &__item {
-      padding: 20px 0;
-    }
-
-    &__item:not(:last-child) {
-      border-bottom: 1px solid $port-gore;
-    }
-  }
 }
 
 .footer-bottom {
@@ -138,6 +143,7 @@
 }
 
 .menu {
+  display: flex;
   &__item {
     &--footer {
       padding: 0 12px;

@@ -1,10 +1,18 @@
 .top-slider {
   padding-bottom: 70px;
 
+  @include r(767) {
+    padding-bottom: 20px;
+  }
+
   &__inner {
     background-color: $light-apricot;
     background-size: cover;
     padding-bottom: 40px;
+
+    @include r(767) {
+      padding-bottom: 5px;
+    }
   }
 
   &__content {
@@ -16,11 +24,31 @@
     justify-content: center;
     align-items: flex-end;
     padding: 11vw 20px;
+
+    @include r(968) {
+      padding: 4vw 20px;
+    }
+
+    @include r(767) {
+      flex-direction: column;
+      padding: 5px;
+    }
   }
 
   &__box {
     max-width: 500px;
     margin-right: 30px;
+
+    @include r(968) {
+      margin-right: 0;
+    }
+
+    @include r(767) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
   }
 
   &__title {
@@ -33,6 +61,23 @@
     font-weight: bold;
     margin-bottom: 2vw;
     @include text-clamp--large;
+
+    @include r(1200) {
+      font-size: 60px;
+    }
+
+    @include r(968) {
+      font-size: 50px;
+    }
+
+    @include r(767) {
+      font-size: 30px;
+    }
+
+    @include r(440) {
+      font-size: 32px;
+      max-width: 300px;
+    }
   }
 
   &__part {
@@ -45,6 +90,21 @@
     color: $blue-light;
     margin-bottom: 2vw;
     @include text-clamp--large;
+
+    @include r(968) {
+      max-width: 300px;
+      font-size: 16px;
+    }
+
+    @include r(767) {
+      font-size: 14px;
+      text-align: left;
+    }
+
+    @include r(440) {
+      font-size: 12px;
+      max-width: 240px;
+    }
   }
 
   &__link {
@@ -65,6 +125,15 @@
       margin-left: 6vh;
       fill: $white;
     }
+
+    @include r(767) {
+      font-size: 12px;
+      padding: 10px;
+
+      & svg {
+        margin-left: 10px;
+      }
+    }
   }
 
 
@@ -84,6 +153,29 @@
       top: -6vw;
       right: -6vw;
       z-index: -1;
+    }
+
+    @include r(1200) {
+      width: calc(640px - 15vw);
+      height: calc(264px - 5vw);
+      padding-right: 5px;
+
+      &::before {
+        display: none;
+      }
+    }
+
+    @include r(767) {
+      padding-top: 1em;
+      padding-right: 0;
+      width: 37vw;
+      height: 112px;
+      margin: 0 auto;
+    }
+
+    @include r(440) {
+      width: 280px;
+      height: 130px;
     }
   }
 
@@ -115,6 +207,11 @@
         &:hover {
           opacity: 1;
         }
+
+        @include r(767) {
+          width: 20px;
+          height: 20px;
+        }
       }
 
       &.slick-active {
@@ -124,121 +221,29 @@
       }
     }
   }
-
-  @include r(1200) {
-    &__title {
-      font-size: 60px;
-    }
-
-    &__image {
-      width: calc(640px - 15vw);
-      height: calc(264px - 5vw);
-      padding-right: 5px;
-
-      &::before {
-        display: none;
-      }
-    }
-  }
-
-  @include r(968) {
-    &__item{
-      padding: 4vw 20px;
-    }
-    &__box {
-      margin-right: 0;
-    }
-
-    &__title {
-      font-size: 50px;
-    }
-
-    &__part {
-      max-width: 300px;
-    }
-
-    &__text {
-      font-size: 16px;
-    }
-  }
-
-  @include r(768) {
-    padding-bottom: 20px;
-    &__inner{
-      padding-bottom: 20px;
-    }
-    &__item {
-      flex-direction: column;
-      padding: 10px;
-    }
-
-    &__box {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-    }
-
-    &__title {
-      font-size: 40px;
-    }
-
-    &__text {
-      font-size: 14px;
-    }
-
-    &__image {
-      padding-top: 1em;
-      padding-right: 0;
-      width: 37vw;
-      height: 112px;
-      margin: 0 auto;
-    }
-
-    &__link {
-      font-size: 12px;
-      padding: 15px;
-    }
-
-    & svg {
-      margin-left: 10px;
-    }
-
-    .slick-dots {
-      li {
-        button {
-          width: 25px;
-          height: 25px;
-        }
-      }
-    }
-  }
-
-  @include r(440) {
-    &__title {
-      font-size: 32px;
-      max-width: 300px;
-    }
-
-    &__text {
-      font-size: 12px;
-      max-width: 280px;
-    }
-
-    &__image {
-      width: 280px;
-      height: 130px;
-    }
-  }
 }
 
 .benefits {
   background-color: $provincial-pink;
   padding: 33px 0;
 
+  @include r(968) {
+    padding: 20px 0;
+  }
+
+  @include r(440) {
+    padding: 0;
+  }
+
   &__list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+
+    @include r(968) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   &__item {
@@ -268,57 +273,10 @@
       left: -30%;
       top: 10%;
     }
-  }
 
-  &__item-icon1 {
-    max-width: 200px;
-
-    &::before {
-      background-image: url('../images/icons/support.svg');
-    }
-  }
-
-  &__item-icon2 {
-    &::before {
-      background-image: url('../images/icons/delivery.svg');
-    }
-  }
-
-  &__item-icon3 {
-    &::before {
-      background-image: url('../images/icons/payment.svg');
-    }
-  }
-
-  &__title,
-  &__descr {
-    text-align: left;
-    @include text-clamp;
-  }
-
-  &__title {
-    @extend %dmsans-700;
-    font-size: 18px;
-    color: $title--grey;
-    position: relative;
-  }
-
-  &__descr {
-    font-size: 16px;
-    line-height: 1.9;
-    @extend %dmsans-400;
-  }
-
-  @include r (968) {
-    &__list {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    &__item {
+    @include r(968) {
       width: 215px;
-      padding: 3vw 0;
+      padding: 2vw 0;
 
       &:not(:last-child) {
         border-bottom: 1px solid $westar;
@@ -328,23 +286,62 @@
         display: none;
       }
     }
-  }
 
-  @include r (440) {
-    padding: 0;
-
-    &__item {
+    @include r(440) {
       &::before {
         display: none;
       }
     }
+  }
 
-    &__title {
-      font-size: 16px;
+  &__item--icon1 {
+    max-width: 200px;
+
+    &::before {
+      background-image: url('../images/icons/support.svg');
     }
 
-    &__descr {
+    @include r(968) {
+      max-width: 215px;
+    }
+  }
+
+  &__item--icon2 {
+    &::before {
+      background-image: url('../images/icons/delivery.svg');
+    }
+  }
+
+  &__item--icon3 {
+    &::before {
+      background-image: url('../images/icons/payment.svg');
+    }
+  }
+
+  &__title,
+  &__text {
+    text-align: left;
+    @include text-clamp;
+  }
+
+  &__title {
+    @extend %dmsans-700;
+    font-size: 18px;
+    color: $title--grey;
+    position: relative;
+
+    @include r(968) {
       font-size: 14px;
+    }
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 1.9;
+    @extend %dmsans-400;
+
+    @include r(440) {
+      font-size: 12px;
     }
   }
 }

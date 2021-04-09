@@ -7,11 +7,18 @@
 
 
 @import './components/header';
+@import './components/footer';
+@import './components/breadcrumbs';
+
+// HOME PAGE
 @import './components/home-page/top-slider';
 @import './components/home-page/products';
-@import './components/home-page/special';
 @import './components/home-page/design';
 @import './components/home-page/video';
 @import './components/home-page/blog';
 @import './components/home-page/partners';
-@import './components/footer';
+
+
+// ABOUT US
+@import './components/about-us/advantages';
+@import './components/about-us/team';

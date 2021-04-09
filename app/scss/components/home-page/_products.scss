@@ -1,20 +1,58 @@
 .products-week {
-  padding-bottom: 180px;
 
   &__inner {
     text-align: center;
   }
 
-  &__list {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 80px;
+  &__title{
+    @include r(440){
+      font-size: 30px;
+      margin-bottom: 15px;
+    }
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 380px);
+    grid-row-gap: 40px;
+    padding-bottom: 180px;
+    @include r(1200){
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: none;
+      justify-items: center;
+      grid-row-gap: 20px;
+      padding-bottom: 100px;
+    }
+    @include r(968) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    @include r(767){
+      grid-template-columns: repeat(1, 1fr);
+      padding-bottom: 30px;
+    }
+  }
+}
+
+.filter-buttons{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 80px;
+
+  @include r(1200) {
+    margin-bottom: 5vw;
   }
 
   &__button {
     &:not(:last-child) {
       margin-right: 30px;
+    }
+
+    @include r(440) {
+      &:not(:last-child) {
+        margin-right: 15px;
+      }
     }
   }
 
@@ -40,151 +78,158 @@
     &:active {
       opacity: 0.8;
     }
-  }
 
-  &__items {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, 380px);
-    grid-row-gap: 40px;
-  }
-
-  @include r(1200) {
-    padding-bottom: 100px;
-    &__list{
-      margin-bottom: 5vw;
-    }
-    &__items {
-      grid-template-columns: repeat(3, 1fr);
-      grid-template-rows: none;
-      justify-items: center;
-      grid-row-gap: 20px;
-    }
-  }
-
-  @include r(968) {
-    &__items {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-
-  @include r(768) {
-    padding-bottom: 30px;
-    &__items {
-      grid-template-columns: repeat(1, 1fr);
-    }
-  }
-  @include r(440){
-    &__title{
-      font-size: 30px;
-      margin-bottom: 15px;
-    }
-    &__button {
-      &:not(:last-child) {
-        margin-right: 15px;
-      }
-    }
-    &__btn {
+    @include r(440) {
       font-size: 14px;
     }
   }
 }
 
-.product-item {
-  width: 270px;
-  height: 380px;
-  border-radius: 10px;
-  box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
-  transition: opacity, box-shadow 0.3s;
+@import '../article';
 
-  &:hover {
-    opacity: 0.8;
-    box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.2);
+.special {
+  padding-bottom: 95px;
 
-    .product-item__buttons {
-      opacity: 1;
+  @include r(1200) {
+    padding-bottom: 0;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+
+    @include r(1200) {
+      flex-direction: column;
     }
   }
 
-  &__icon {
-    width: 20px;
-    height: 20px;
-    fill: $casper;
-  }
-
-  &__link {
+  &__offer {
+    background-color: $spanish-white;
+    width: 100%;
+    min-height: 390px;
     display: flex;
-    flex-direction: column;
-    text-align: center;
-    height: 100%;
-    padding: 35px 20px;
-  }
+    justify-content: center;
+    align-items: center;
 
-  &__buttons {
-    display: flex;
-    justify-content: space-between;
-    position: absolute;
-    top: 70%;
-    opacity: 0;
-    transition: opacity 0.3s;
-  }
+    &:nth-child(1) {
+      margin-right: 30px;
+    }
 
-  &__btn {
-    @include btn-cirkle;
-    padding: 12px;
-    background-color: $white;
-    outline-color: $casper;
-    transition: transform 0.3s;
-    box-shadow: 0px 0px 10px 5px rgba(163, 187, 200, 0.4);
+    @include r(1200) {
+      margin-bottom: 65px;
+      padding: 0 5px;
 
-    &:hover {
-      background-color: $casper;
-      transform: scale(1.2);
-
-      & svg {
-        fill: #fff;
+      &:nth-child(1) {
+        margin-right: 0;
       }
     }
 
-    &:focus {
-      border: 1px solid $blue-dianne;
+    @include r(767) {
+      min-height: 250px;
     }
 
-    &:active {
-      opacity: 0.8;
+    @include r(440) {
+      margin-bottom: 30px;
     }
-
-    &:not(:last-child) {
-      margin-right: 15px;
-    }
-  }
-
-  &__image {
-    display: flex;
-    justify-content: center;
-    align-self: center;
-    flex-grow: 2;
-    position: relative;
   }
 
   &__img {
-    align-self: center;
-    max-width: 200px;
-    max-height: 220px;
+    margin-top: -22%;
+    margin-right: 1vh;
+
+    @include r(1200) {
+      width: 170px;
+      height: 310px;
+    }
+
+    @include r(968) {
+      margin-top: 0%;
+    }
+
+    @include r(767) {
+      width: 135px;
+      height: 240px;
+    }
+
+    @include r(440) {
+      height: 170px;
+      margin-top: -8%;
+    }
+  }
+
+  &__text {
+    max-width: 345px;
   }
 
   &__title {
-    @extend %dmsans-500;
+    @extend %dmsans-700;
+    font-size: 26px;
+    line-height: 1.2;
+    color: $blue-dianne;
+    margin-bottom: 15px;
+    @include text-clamp--large;
+
+    @include r(767) {
+      font-size: 22px;
+    }
+
+    @include r(440) {
+      font-size: 18px;
+    }
+  }
+
+  &__descr {
     font-size: 16px;
     line-height: 1.8;
     color: $blue-dianne;
-    @include text-clamp;
+    margin-bottom: 35px;
+    @include text-clamp--large;
+    overflow: hidden;
+
+    @include r(767) {
+      font-size: 14px;
+    }
+
+    @include r(400) {
+      font-size: 12px;
+    }
   }
 
-  &__price {
-    @extend %dmsans-700;
-    font-size: 16px;
-    line-height: 1.5;
-    color: $casper;
+
+  &__link {
+    display: inline-block;
+    @extend %rubik-500;
+    font-weight: 700;
+    color: $blue-light;
+    font-size: 15px;
+    line-height: 1;
+    background-color: transparent;
+    border: 1px solid $edward;
+    border-radius: 5px;
+    padding: 20px;
+    transition: transform 0.3s;
+
+    &:hover {
+      transform: translateX(10px);
+    }
+
+    & svg {
+      margin-left: 45px;
+      fill: $blue-light;
+    }
+
+    @include r(767) {
+      font-size: 14px;
+      padding: 15px;
+    }
+
+    @include r(440) {
+      padding: 10px;
+      font-size: 14px;
+
+      & svg {
+        margin-left: 10px;
+      }
+    }
   }
 }

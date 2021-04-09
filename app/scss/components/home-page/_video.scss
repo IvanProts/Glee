@@ -1,5 +1,8 @@
 .video {
   padding-bottom: 120px;
+  @include r(767){
+    padding-bottom: 30px;
+  }
 
   &__popup {
     display: flex;
@@ -10,29 +13,46 @@
     background-repeat: no-repeat;
     min-height: 500px;
     transition: transform 0.3s;
+    @include r(968){
+      min-height: 350px;
+    }
+    @include r(767){
+      min-height: 320px;
+    }
   }
 
   &__link {
     position: relative;
     display: flex;
+    padding: 17% 45%;
     z-index: 2;
     transition: transform 0.3s;
-    &::after{
+
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+
+  &__btn {
+    position: relative;
+
+    &::after,
+    &::before {
       content: " ";
       position: absolute;
       background-color: $casper;
       border-radius: 50%;
+    }
+
+    &::after { 
       width: 98px;
       height: 98px;
       z-index: -1;
       top: -38px;
       left: -37px;
     }
-    &::before{
-      content: " ";
-      position: absolute;
-      background-color: $casper;
-      border-radius: 50%;
+
+    &::before {
       width: 127px;
       height: 127px;
       opacity: 0.4;
@@ -40,19 +60,9 @@
       top: -52px;
       left: -51px;
     }
-    &:hover{
-      transform: scale(1.2);
-    }
   }
 
   &__icon {
     fill: $white;
-  }
-
-  @include r(768){
-    padding-bottom: 30px;
-    &__popup{
-      min-height: 320px;
-    }
   }
 }

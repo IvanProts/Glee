@@ -1,9 +1,13 @@
 .product-item {
-  max-width: 270px;
-  max-height: 380px;
+  width: 270px;
+  height: 380px;
   border-radius: 10px;
   box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
   transition: opacity, box-shadow 0.3s;
+
+  @include r(767) {
+    height: 310px;
+  }
 
   &:hover {
     opacity: 0.8;
@@ -79,6 +83,11 @@
     align-self: center;
     max-width: 200px;
     max-height: 220px;
+
+    @include r(767) {
+      max-width: 150px;
+      max-height: 160px;
+    }
   }
 
   &__title {

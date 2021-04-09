@@ -7,18 +7,30 @@
     justify-content: space-between;
   }
 
-  &__title{
-    margin-bottom: 40px;
+  &__items{
+    @include r(1200){
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
   }
 
-  &__link {
+  &__title {
+    margin-bottom: 40px;
+    @include r(440){
+      font-size: 28px;
+      max-width: 210px;
+    }
+  }
+
+  &__btn {
     @extend %dmsans-700;
     font-size: 16px;
     color: $mine-shaft;
     padding-right: 25px;
     position: relative;
     transition: opacity 0.3s;
-    &::after{
+
+    &::after {
       content: "";
       position: absolute;
       background-image: url('../images/icons/arrow.svg');
@@ -28,7 +40,7 @@
       right: 0;
     }
 
-    &:hover{
+    &:hover {
       opacity: 0.8;
     }
   }
@@ -42,14 +54,27 @@
     background-color: $white;
     border-radius: 5px;
     position: relative;
-    &:hover{
-      transform: scale(1.1);
+    transition: box-shadow 0.3s;
+
+    &:hover {
+      box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.2);
+    }
+    @include r(1200){
+      margin-bottom: 30px;
     }
   }
 
 
   &__image {
     margin-bottom: 35px;
+    @include r(968){
+      max-height: 200px;
+    }
+  }
+  &__img{
+    @include r(968) {
+      max-height: 200px;
+    }
   }
 
   &__category {
@@ -62,8 +87,11 @@
     background-color: $casper;
     padding: 6px 30px;
     border-radius: 25px;
-    top: 57%;
+    top: 55%;
     left: 7%;
+    @include r(968){
+      top: 52%;
+    }
   }
 
   &__descr {
@@ -78,6 +106,10 @@
     @include text-clamp--large;
     padding-bottom: 7vh;
     border-bottom: 1px solid $alto;
+    @include r(968){
+      padding-bottom: 0;
+      border-bottom: none;
+    }
   }
 
   &__info {
@@ -89,13 +121,14 @@
   }
 
   &__data,
-  &__author{
+  &__author {
     position: relative;
   }
 
-  &__data{
-    padding:0 30px 0 20px;
-    &::before{
+  &__data {
+    padding: 0 30px 0 20px;
+
+    &::before {
       content: "";
       position: absolute;
       background-image: url('../images/icons/calendar.svg');
@@ -106,8 +139,9 @@
     }
   }
 
-  &__author{
+  &__author {
     padding-left: 15px;
+
     &::before {
       content: "";
       position: absolute;
@@ -116,33 +150,6 @@
       height: 12px;
       left: 3px;
       top: 6px;
-    }
-  }
-  @include r(1200){
-    &__items{
-      justify-content: space-around;
-      flex-wrap: wrap;
-    }
-    &__item{
-      margin-bottom: 30px;
-    }
-  }
-  @include r(768){
-    &__title{
-      font-size: 30px;
-      margin-bottom: 20px;
-    }
-  }
-  &__link {
-    font-size: 14px;
-    &::after{
-      top: 10px;
-    }
-  }
-  @include r(440){
-    &__title{
-      font-size: 28px;
-      max-width: 210px;
     }
   }
 }
