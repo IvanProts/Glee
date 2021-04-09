@@ -1,0 +1,67 @@
+.info{
+  height: 38vh;
+  background-color: $light-apricot;
+  &__items{
+    @extend %dmsans-700;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    color: $blue-dianne;
+    line-height: 1;
+    padding: 170px 0 80px;
+  }
+  &__item{
+    position: relative;
+    &::before{
+      content: "";
+      position: absolute;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+    &--icon1{
+      &::before{
+        background-image: url('../images/icons/advantages/info/icon1.svg');
+        width: 73px;
+        height: 59px;
+        right: 54px;
+        top: -70px
+      }
+    }
+    &--icon2{
+      &::before{
+        background-image: url('../images/icons/advantages/info/icon2.svg');
+        width: 72px;
+        height: 51px;
+        right: 45px;
+        top: -55px;
+      }
+    }
+    &--icon3{
+      &::before{
+        background-image: url('../images/icons/advantages/info/icon3.svg');
+        width: 78px;
+        height: 64px;
+        right: 45px;
+        top: -70px;
+      }
+    }
+    &--icon4{
+      &::before{
+        background-image: url('../images/icons/advantages/info/icon4.svg');
+        width: 60px;
+        height: 64px;
+        right: 35px;
+        top: -70px;
+      }
+    }
+  }
+  &__num{
+    display: block;
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  &__text{
+    font-size: 18px;
+  }
+}

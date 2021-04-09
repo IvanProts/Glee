@@ -36,6 +36,17 @@
   }
 }
 
+@mixin text-clamp--xxl($lines: 5, $line-height: false) {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $lines;
+
+  @if $line-height {
+    max-height: $line-height * $lines * 1px;
+  }
+}
+
 @mixin products-icon {
   width: 20px;
   height: 20px;

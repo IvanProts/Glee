@@ -143,6 +143,7 @@
 }
 
 .menu {
+  display: flex;
   &__item {
     &--footer {
       padding: 0 12px;

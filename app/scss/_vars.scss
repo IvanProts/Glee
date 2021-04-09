@@ -20,6 +20,9 @@ $alabaster: #f8f8f8;
 $mine-shaft: #262626;
 $alto: #e0e0e0;
 $ebony-clay: #222933;
+$tundora: #4c4c4c;
+$comet: #565872;
+$wild-sand: #f6f6f6;
 
 %dmsans-400 {
   font-family: "DMSans", sans-serif;
@@ -36,19 +39,35 @@ $ebony-clay: #222933;
   font-weight: 700;
 }
 
+%rubik-300 {
+  font-family: "Rubik", sans-serif;
+  font-weight: 300;
+}
+
 %rubik-400 {
   font-family: "Rubik", sans-serif;
   font-weight: 400;
 }
+
 
 %rubik-500 {
   font-family: "Rubik", sans-serif;
   font-weight: 500;
 }
 
+%rubik-700 {
+  font-family: "Rubik", sans-serif;
+  font-weight: 700;
+}
+
 %poppins-700 {
   font-family: "Poppins", sans-serif;
   font-weight: 700;
+}
+
+%poppins-600 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
 }
 
 %user-icon {
