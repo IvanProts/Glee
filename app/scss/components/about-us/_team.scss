@@ -1,13 +1,24 @@
 .team{
   padding-bottom: 15vh;
+  @include r(968){
+    padding-bottom: 8vw;
+  }
   &__inner{
     display: flex;
+    @include r(1200){
+      flex-direction: column;
+    }
   }
   &__descr{
     max-width: 295px;
     text-align: left;
     margin-right: 115px;
     color: $blue-dianne;
+    @include r(1200) {
+      max-width: 100%;
+      margin-right: 0;
+      margin-bottom: 6vw;
+    }
   }
 
   &__title{
@@ -31,11 +42,18 @@
       margin-left: 25px;
       fill: $white;
     }
+
+    @include r(1200) {
+      margin-bottom: 8vw;
+    }
   }
   &__items{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    @include r(1200){
+      justify-content: space-around;
+    }
   }
   &__item{
     margin-bottom: 100px;
@@ -47,26 +65,38 @@
     position: absolute;
     height: 110px;
     width: 325px;
-    bottom: -80px;
+    bottom: -65px;
     background-color: $white;
     box-shadow: 0px 6px 57px 0px rgba(37, 37, 37, 0.05);
+    @include r(440) {
+      max-width: 280px;
+    }
   }
   &__staff{
-    padding-left: 25px;
+    width: 280px;
   }
   &__name{
     font-size: 22px;
     color: $blue-dianne;
     @extend %dmsans-700;
+    @include r(440){
+      font-size: 16px;
+    }
   }
   &__position{
     font-size: 16px;
     color: $comet;
+    @include r(440) {
+      font-size: 14px;
+    }
   }
   &__social{
     display: flex;
     justify-content: space-between;
     margin-left: 55px;
+    @include r(440) {
+      margin-left: 20px;
+    }
   }
   &__social-btn{
     width: 40px;

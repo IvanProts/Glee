@@ -1,9 +1,31 @@
 .advantages {
   padding-bottom: 15vh;
 
+  @include r(968){
+    padding-bottom: 8vw;
+  }
+
   &__content {
     display: flex;
     margin-bottom: 120px;
+
+    @include r(1200) {
+      flex-direction: column;
+      margin-bottom: 8vw;
+      align-items: center;
+    }
+  }
+
+  &__image {
+    @include r(968) {
+      height: 95vw;
+      width: 80vw;
+    }
+
+    @include r(767) {
+      height: 95vw;
+      width: 80vw;
+    }
   }
 
   &__inner {
@@ -11,12 +33,22 @@
     flex-direction: column;
     justify-content: center;
     padding-left: 45px;
+
+    @include r(1200) {
+      max-width: 570px;
+      padding-left: 0;
+    }
   }
 
   &__experiense {
     display: flex;
     align-items: center;
     margin-bottom: 50px;
+
+    @include r(1200) {
+      margin-bottom: 3vh;
+      justify-content: center;
+    }
   }
 
   &__num {
@@ -25,6 +57,10 @@
     line-height: 1;
     color: $casper;
     margin-right: 25px;
+
+    @include r(440) {
+      font-size: 120px;
+    }
   }
 
   &__text {
@@ -37,6 +73,14 @@
   &__title {
     color: $blue-dianne;
     margin-bottom: 50px;
+
+    @include r(1200) {
+      margin-bottom: 3vh;
+    }
+
+    @include r(767) {
+      font-size: 26px;
+    }
   }
 
   &__descr {
@@ -45,6 +89,10 @@
     @include text-clamp--xxl;
     padding-bottom: 60px;
     position: relative;
+
+    @include r(1200) {
+      padding-bottom: 8vh;
+    }
 
     &::before {
       content: "";
@@ -59,11 +107,19 @@
   &__numbers {
     max-width: 525px;
     padding-top: 40px;
+
+    @include r(767) {
+      padding-top: 20px;
+    }
   }
 
   &__items {
     display: flex;
     justify-content: space-around;
+
+    @include r(767) {
+      justify-content: space-evenly;
+    }
   }
 
   &__item {
@@ -79,7 +135,15 @@
       height: 80px;
       background-color: $mystic;
       top: -5px;
-      right: -40px;
+      right: -40%;
+
+      @include r(767) {
+        height: 60px;
+      }
+
+      @include r(440) {
+        right: -25%;
+      }
     }
   }
 
@@ -89,14 +153,24 @@
     color: $blue-dianne;
     margin-bottom: 12px;
     position: relative;
-    &::before{
+
+    @include r(767) {
+      font-size: 22px;
+    }
+
+    &::before {
       content: " ";
       position: absolute;
       left: -50px;
       top: 10px;
+
+      @include r(767) {
+        display: none;
+      }
     }
-    &--icon1{
-      &::before{
+
+    &--icon1 {
+      &::before {
         background-image: url('../images/icons/advantages/icon1.svg');
         background-repeat: no-repeat;
         background-position: center;
@@ -105,8 +179,9 @@
         height: 38px;
       }
     }
-    &--icon2{
-      &::before{
+
+    &--icon2 {
+      &::before {
         background-image: url('../images/icons/advantages/icon2.svg');
         background-repeat: no-repeat;
         background-position: center;
@@ -115,8 +190,9 @@
         height: 39px;
       }
     }
-    &--icon3{
-      &::before{
+
+    &--icon3 {
+      &::before {
         background-image: url('../images/icons/advantages/icon3.svg');
         background-repeat: no-repeat;
         background-position: center;
@@ -130,6 +206,10 @@
   &__name {
     font-size: 16px;
     color: $tundora;
+
+    @include r(767) {
+      font-size: 14px;
+    }
   }
 
   @import './info';

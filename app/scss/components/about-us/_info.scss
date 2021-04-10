@@ -1,7 +1,16 @@
-.info{
-  height: 38vh;
+.info {
+  height: 320px;
   background-color: $light-apricot;
-  &__items{
+
+  @include r(968) {
+    height: 35%;
+  }
+
+  @include r(440) {
+    height: 120px;
+  }
+
+  &__items {
     @extend %dmsans-700;
     display: flex;
     justify-content: space-between;
@@ -9,59 +18,115 @@
     color: $blue-dianne;
     line-height: 1;
     padding: 170px 0 80px;
+
+    @include r(968) {
+      padding: 12vw 0 6vw;
+    }
+
+    @include r(767) {
+      padding: 24vh 0 8vh;
+    }
+
+    @include r(440) {
+      padding: 3vh 0;
+    }
   }
-  &__item{
+
+  &__item {
     position: relative;
-    &::before{
+
+    &::before {
       content: "";
       position: absolute;
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
+
+      @include r(440) {
+        display: none;
+      }
     }
-    &--icon1{
-      &::before{
+
+    &--icon1 {
+      &::before {
         background-image: url('../images/icons/advantages/info/icon1.svg');
         width: 73px;
         height: 59px;
         right: 54px;
-        top: -70px
+        top: -70px;
+
+        @include r(767) {
+          right: 4vw;
+        }
       }
     }
-    &--icon2{
-      &::before{
+
+    &--icon2 {
+      &::before {
         background-image: url('../images/icons/advantages/info/icon2.svg');
         width: 72px;
         height: 51px;
         right: 45px;
         top: -55px;
+
+        @include r(767) {
+          right: 5vw;
+        }
       }
     }
-    &--icon3{
-      &::before{
+
+    &--icon3 {
+      &::before {
         background-image: url('../images/icons/advantages/info/icon3.svg');
         width: 78px;
         height: 64px;
         right: 45px;
         top: -70px;
+
+        @include r(767) {
+          right: 4vw;
+        }
       }
     }
-    &--icon4{
-      &::before{
+
+    &--icon4 {
+      &::before {
         background-image: url('../images/icons/advantages/info/icon4.svg');
         width: 60px;
         height: 64px;
         right: 35px;
         top: -70px;
+
+        @include r(767) {
+          right: 3vw;
+        }
       }
     }
   }
-  &__num{
+
+  &__num {
     display: block;
     font-size: 36px;
     margin-bottom: 20px;
+
+    @include r(767) {
+      font-size: 24px;
+    }
+
+    @include r(440) {
+      font-size: 18px;
+    }
   }
-  &__text{
+
+  &__text {
     font-size: 18px;
+
+    @include r(767) {
+      font-size: 14px;
+    }
+
+    @include r(440) {
+      max-width: 70px;
+    }
   }
 }
