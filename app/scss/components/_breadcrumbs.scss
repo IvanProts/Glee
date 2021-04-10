@@ -2,7 +2,7 @@
   padding-bottom: 11vh;
 
   &__content {
-    padding: 30px 0;
+    padding: 20px 0;
     background-color: $mystic;
     text-align: center;
     color: $ebony-clay;
@@ -12,7 +12,6 @@
     @extend %rubik-300;
     font-size: 36px;
     line-height: 1.5;
-    margin-bottom: 10px;
   }
 }
 
