@@ -13,7 +13,7 @@
   &__items {
     @extend %dmsans-700;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     text-align: center;
     color: $blue-dianne;
     line-height: 1;

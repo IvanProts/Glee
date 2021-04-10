@@ -1,5 +1,5 @@
 .team{
-  padding-bottom: 15vh;
+  padding-bottom: 7vh;
   @include r(968){
     padding-bottom: 8vw;
   }
@@ -10,9 +10,9 @@
     }
   }
   &__descr{
-    max-width: 295px;
+    max-width: 340px;
     text-align: left;
-    margin-right: 115px;
+    margin-right: 60px;
     color: $blue-dianne;
     @include r(1200) {
       max-width: 100%;
@@ -23,7 +23,7 @@
 
   &__title{
     color: inherit;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
   }
 
   &__text{
@@ -33,13 +33,13 @@
 
   &__link{
     @include btn;
-    padding: 20px 25px;
+    padding: 15px 20px;
     border-radius: 5px;
     font-size: 15px;
     @extend %poppins-600;
 
     & svg {
-      margin-left: 25px;
+      margin-left: 10px;
       fill: $white;
     }
 
@@ -65,7 +65,8 @@
     position: absolute;
     height: 110px;
     width: 325px;
-    bottom: -65px;
+    padding: 0 20px;
+    bottom: -60px;
     background-color: $white;
     box-shadow: 0px 6px 57px 0px rgba(37, 37, 37, 0.05);
     @include r(440) {
@@ -79,6 +80,7 @@
     font-size: 22px;
     color: $blue-dianne;
     @extend %dmsans-700;
+    width: 150px;
     @include r(440){
       font-size: 16px;
     }
@@ -93,7 +95,7 @@
   &__social{
     display: flex;
     justify-content: space-between;
-    margin-left: 55px;
+    margin-left: 40px;
     @include r(440) {
       margin-left: 20px;
     }
