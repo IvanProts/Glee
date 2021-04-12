@@ -67,7 +67,7 @@
       }
       @include r(968){
         font-size: 20px;
-        padding: 4vh 3vw;
+        padding: 3vh 3vw;
       }
     }
 
@@ -98,6 +98,7 @@
       &--active {
         transform: translateY(0%);
         z-index: 2;
+        padding-top: 60px;
       }
     }
   }
