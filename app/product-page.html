@@ -282,24 +282,25 @@
           </div>
 
           <div class="products__content">
+            <div class="products__box">
               <article class="product-item products__item">
                 <a class="product-item__link" href="#">
                   <div class="product-item__image">
                     <img class="product-item__img" src="images/content/products/product1.jpg" alt="product images">
                     <div class="product-item__buttons">
-                      <button class="product-item__btn" type="button">
+                      <button class="product-item__btn product-item__btn--search" type="button">
                         <span class="sr-only">This button redirect you on page with this item</span>
                         <svg class="product-item__icon">
                           <use xlink:href="images/icons/sprite/svg/sprite.symbol.svg#user-search"></use>
                         </svg>
                       </button>
-                      <button class="product-item__btn" type="button">
+                      <button class="product-item__btn product-item__btn--card" type="button">
                         <span class="sr-only">Add item to your card</span>
                         <svg class="product-item__icon">
                           <use xlink:href="images/icons/sprite/svg/sprite.symbol.svg#user-like"></use>
                         </svg>
                       </button>
-                      <button class="product-item__btn" type="button">
+                      <button class="product-item__btn product-item__btn--like" type="button">
                         <span class="sr-only">Add this item to your like list</span>
                         <svg class="product-item__icon">
                           <use xlink:href="images/icons/sprite/svg/sprite.symbol.svg#user-cart"></use>
@@ -307,10 +308,19 @@
                       </button>
                     </div>
                   </div>
-                  <h3 class="product-item__title">
-                    Wooden radio
-                  </h3>
-                  <span class="product-item__price">$29.00</span>
+                  <div class="product-item__box">
+                    <h3 class="product-item__title">
+                      Wooden radio
+                    </h3>
+                    <div class="product-item__rating" data-rateyo-rating="4"></div>
+                    <span class="product-item__price">$29.00</span>
+                    <span class="product-item__list-price">29$</span>
+                    <div class="product-item__text">
+                      <p>consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                        aliqua.
+                        Ut enim ad minim veniam, quis nostrud exercitation</p>
+                    </div>
+                  </div>
                 </a>
               </article>
               <article class="product-item products__item">
@@ -318,19 +328,19 @@
                   <div class="product-item__image">
                     <img class="product-item__img" src="images/content/products/product2.jpg" alt="product images">
                     <div class="product-item__buttons">
-                      <button class="product-item__btn" type="button">
+                      <button class="product-item__btn product-item__btn--search" type="button">
                         <span class="sr-only">This button redirect you on page with this item</span>
                         <svg class="product-item__icon">
                           <use xlink:href="images/icons/sprite/svg/sprite.symbol.svg#user-search"></use>
                         </svg>
                       </button>
-                      <button class="product-item__btn" type="button">
+                      <button class="product-item__btn product-item__btn--card" type="button">
                         <span class="sr-only">Add item to your card</span>
                         <svg class="product-item__icon">
                           <use xlink:href="images/icons/sprite/svg/sprite.symbol.svg#user-like"></use>
                         </svg>
                       </button>
-                      <button class="product-item__btn" type="button">
+                      <button class="product-item__btn product-item__btn--like" type="button">
                         <span class="sr-only">Add this item to your like list</span>
                         <svg class="product-item__icon">
                           <use xlink:href="images/icons/sprite/svg/sprite.symbol.svg#user-cart"></use>
@@ -338,30 +348,40 @@
                       </button>
                     </div>
                   </div>
-                  <h3 class="product-item__title">
-                    Wooden chair
-                  </h3>
-                  <span class="product-item__price">$29.00</span>
+                  <div class="product-item__box">
+                    <h3 class="product-item__title">
+                      Wooden chair
+                    </h3>
+                    <div class="product-item__rating" data-rateyo-rating="4"></div>
+                    <span class="product-item__price">$29.00</span>
+                    <span class="product-item__list-price">29$</span>
+                    <div class="product-item__text">
+                      <p>consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                        aliqua.
+                        Ut enim ad minim veniam, quis nostrud exercitation</p>
+                    </div>
+                  </div>
                 </a>
               </article>
               <article class="product-item products__item">
                 <a class="product-item__link" href="#">
                   <div class="product-item__image">
-                    <img class="product-item__img" src="images/content/products/product3.jpg" alt="products images">
+                    <img class="product-item__img product-item__img--size" src="images/content/products/product3.jpg"
+                      alt="products images">
                     <div class="product-item__buttons">
-                      <button class="product-item__btn" type="button">
+                      <button class="product-item__btn product-item__btn--search" type="button">
                         <span class="sr-only">This button redirect you on page with this item</span>
                         <svg class="product-item__icon">
                           <use xlink:href="images/icons/sprite/svg/sprite.symbol.svg#user-search"></use>
                         </svg>
                       </button>
-                      <button class="product-item__btn" type="button">
+                      <button class="product-item__btn product-item__btn--card" type="button">
                         <span class="sr-only">Add item to your card</span>
                         <svg class="product-item__icon">
                           <use xlink:href="images/icons/sprite/svg/sprite.symbol.svg#user-like"></use>
                         </svg>
                       </button>
-                      <button class="product-item__btn" type="button">
+                      <button class="product-item__btn product-item__btn--like" type="button">
                         <span class="sr-only">Add this item to your like list</span>
                         <svg class="product-item__icon">
                           <use xlink:href="images/icons/sprite/svg/sprite.symbol.svg#user-cart"></use>
@@ -369,12 +389,405 @@
                       </button>
                     </div>
                   </div>
-                  <h3 class="product-item__title">
-                    White chair
-                  </h3>
-                  <span class="product-item__price">$29.00</span>
+                  <div class="product-item__box">
+                    <h3 class="product-item__title">
+                      White chair
+                    </h3>
+                    <div class="product-item__rating" data-rateyo-rating="4"></div>
+                    <span class="product-item__price">$29.00</span>
+                    <span class="product-item__list-price">29$</span>
+                    <div class="product-item__text">
+                      <p>consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                        aliqua.
+                        Ut enim ad minim veniam, quis nostrud exercitation</p>
+                    </div>
+                  </div>
                 </a>
               </article>
+              <article class="product-item products__item">
+                <a class="product-item__link" href="#">
+                  <div class="product-item__image">
+                    <img class="product-item__img" src="images/content/products/product1.jpg" alt="products images">
+                    <div class="product-item__buttons">
+                      <button class="product-item__btn product-item__btn--search" type="button">
+                        <span class="sr-only">This button redirect you on page with this item</span>
+                        <svg class="product-item__icon">
+                          <use xlink:href="images/icons/sprite/svg/sprite.symbol.svg#user-search"></use>
+                        </svg>
+                      </button>
+                      <button class="product-item__btn product-item__btn--card" type="button">
+                        <span class="sr-only">Add item to your card</span>
+                        <svg class="product-item__icon">
+                          <use xlink:href="images/icons/sprite/svg/sprite.symbol.svg#user-like"></use>
+                        </svg>
+                      </button>
+                      <button class="product-item__btn product-item__btn--like" type="button">
+                        <span class="sr-only">Add this item to your like list</span>
+                        <svg class="product-item__icon">
+                          <use xlink:href="images/icons/sprite/svg/sprite.symbol.svg#user-cart"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="product-item__box">
+                    <h3 class="product-item__title">
+                      White chair
+                    </h3>
+                    <div class="product-item__rating" data-rateyo-rating="4"></div>
+                    <span class="product-item__price">$29.00</span>
+                    <span class="product-item__list-price">29$</span>
+                    <div class="product-item__text">
+                      <p>consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                        aliqua.
+                        Ut enim ad minim veniam, quis nostrud exercitation</p>
+                    </div>
+                  </div>
+                </a>
+              </article>
+              <article class="product-item products__item">
+                <a class="product-item__link" href="#">
+                  <div class="product-item__image">
+                    <img class="product-item__img product-item__img--size" src="images/content/products/product5.jpg"
+                      alt="products images">
+                    <div class="product-item__buttons">
+                      <button class="product-item__btn product-item__btn--search" type="button">
+                        <span class="sr-only">This button redirect you on page with this item</span>
+                        <svg class="product-item__icon">
+                          <use xlink:href="images/icons/sprite/svg/sprite.symbol.svg#user-search"></use>
+                        </svg>
+                      </button>
+                      <button class="product-item__btn product-item__btn--card" type="button">
+                        <span class="sr-only">Add item to your card</span>
+                        <svg class="product-item__icon">
+                          <use xlink:href="images/icons/sprite/svg/sprite.symbol.svg#user-like"></use>
+                        </svg>
+                      </button>
+                      <button class="product-item__btn product-item__btn--like" type="button">
+                        <span class="sr-only">Add this item to your like list</span>
+                        <svg class="product-item__icon">
+                          <use xlink:href="images/icons/sprite/svg/sprite.symbol.svg#user-cart"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="product-item__box">
+                    <h3 class="product-item__title">
+                      White chair
+                    </h3>
+                    <div class="product-item__rating" data-rateyo-rating="4"></div>
+                    <span class="product-item__price">$29.00</span>
+                    <span class="product-item__list-price">29$</span>
+                    <div class="product-item__text">
+                      <p>consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                        aliqua.
+                        Ut enim ad minim veniam, quis nostrud exercitation</p>
+                    </div>
+                  </div>
+                </a>
+              </article>
+              <article class="product-item products__item">
+                <a class="product-item__link" href="#">
+                  <div class="product-item__image">
+                    <img class="product-item__img product-item__img--size" src="images/content/products/product7.jpg"
+                      alt="products images">
+                    <div class="product-item__buttons">
+                      <button class="product-item__btn product-item__btn--search" type="button">
+                        <span class="sr-only">This button redirect you on page with this item</span>
+                        <svg class="product-item__icon">
+                          <use xlink:href="images/icons/sprite/svg/sprite.symbol.svg#user-search"></use>
+                        </svg>
+                      </button>
+                      <button class="product-item__btn product-item__btn--card" type="button">
+                        <span class="sr-only">Add item to your card</span>
+                        <svg class="product-item__icon">
+                          <use xlink:href="images/icons/sprite/svg/sprite.symbol.svg#user-like"></use>
+                        </svg>
+                      </button>
+                      <button class="product-item__btn product-item__btn--like" type="button">
+                        <span class="sr-only">Add this item to your like list</span>
+                        <svg class="product-item__icon">
+                          <use xlink:href="images/icons/sprite/svg/sprite.symbol.svg#user-cart"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="product-item__box">
+                    <h3 class="product-item__title">
+                      White chair
+                    </h3>
+                    <div class="product-item__rating" data-rateyo-rating="4"></div>
+                    <span class="product-item__price">$29.00</span>
+                    <span class="product-item__list-price">29$</span>
+                    <div class="product-item__text">
+                      <p>consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                        aliqua.
+                        Ut enim ad minim veniam, quis nostrud exercitation</p>
+                    </div>
+                  </div>
+                </a>
+              </article>
+              <article class="product-item products__item">
+                <a class="product-item__link" href="#">
+                  <div class="product-item__image">
+                    <img class="product-item__img product-item__img--size" src="images/content/products/product8.jpg"
+                      alt="products images">
+                    <div class="product-item__buttons">
+                      <button class="product-item__btn product-item__btn--search" type="button">
+                        <span class="sr-only">This button redirect you on page with this item</span>
+                        <svg class="product-item__icon">
+                          <use xlink:href="images/icons/sprite/svg/sprite.symbol.svg#user-search"></use>
+                        </svg>
+                      </button>
+                      <button class="product-item__btn product-item__btn--card" type="button">
+                        <span class="sr-only">Add item to your card</span>
+                        <svg class="product-item__icon">
+                          <use xlink:href="images/icons/sprite/svg/sprite.symbol.svg#user-like"></use>
+                        </svg>
+                      </button>
+                      <button class="product-item__btn product-item__btn--like" type="button">
+                        <span class="sr-only">Add this item to your like list</span>
+                        <svg class="product-item__icon">
+                          <use xlink:href="images/icons/sprite/svg/sprite.symbol.svg#user-cart"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="product-item__box">
+                    <h3 class="product-item__title">
+                      White chair
+                    </h3>
+                    <div class="product-item__rating" data-rateyo-rating="4"></div>
+                    <span class="product-item__price">$29.00</span>
+                    <span class="product-item__list-price">29$</span>
+                    <div class="product-item__text">
+                      <p>consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                        aliqua.
+                        Ut enim ad minim veniam, quis nostrud exercitation</p>
+                    </div>
+                  </div>
+                </a>
+              </article>
+              <article class="product-item products__item">
+                <a class="product-item__link" href="#">
+                  <div class="product-item__image">
+                    <img class="product-item__img product-item__img--size" src="images/content/products/product7.jpg"
+                      alt="products images">
+                    <div class="product-item__buttons">
+                      <button class="product-item__btn product-item__btn--search" type="button">
+                        <span class="sr-only">This button redirect you on page with this item</span>
+                        <svg class="product-item__icon">
+                          <use xlink:href="images/icons/sprite/svg/sprite.symbol.svg#user-search"></use>
+                        </svg>
+                      </button>
+                      <button class="product-item__btn product-item__btn--card" type="button">
+                        <span class="sr-only">Add item to your card</span>
+                        <svg class="product-item__icon">
+                          <use xlink:href="images/icons/sprite/svg/sprite.symbol.svg#user-like"></use>
+                        </svg>
+                      </button>
+                      <button class="product-item__btn product-item__btn--like" type="button">
+                        <span class="sr-only">Add this item to your like list</span>
+                        <svg class="product-item__icon">
+                          <use xlink:href="images/icons/sprite/svg/sprite.symbol.svg#user-cart"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="product-item__box">
+                    <h3 class="product-item__title">
+                      White chair
+                    </h3>
+                    <div class="product-item__rating" data-rateyo-rating="4"></div>
+                    <span class="product-item__price">$29.00</span>
+                    <span class="product-item__list-price">29$</span>
+                    <div class="product-item__text">
+                      <p>consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                        aliqua.
+                        Ut enim ad minim veniam, quis nostrud exercitation</p>
+                    </div>
+                  </div>
+                </a>
+              </article>
+              <article class="product-item products__item">
+                <a class="product-item__link" href="#">
+                  <div class="product-item__image">
+                    <img class="product-item__img product-item__img--size" src="images/content/products/product2.jpg"
+                      alt="products images">
+                    <div class="product-item__buttons">
+                      <button class="product-item__btn product-item__btn--search" type="button">
+                        <span class="sr-only">This button redirect you on page with this item</span>
+                        <svg class="product-item__icon">
+                          <use xlink:href="images/icons/sprite/svg/sprite.symbol.svg#user-search"></use>
+                        </svg>
+                      </button>
+                      <button class="product-item__btn product-item__btn--card" type="button">
+                        <span class="sr-only">Add item to your card</span>
+                        <svg class="product-item__icon">
+                          <use xlink:href="images/icons/sprite/svg/sprite.symbol.svg#user-like"></use>
+                        </svg>
+                      </button>
+                      <button class="product-item__btn product-item__btn--like" type="button">
+                        <span class="sr-only">Add this item to your like list</span>
+                        <svg class="product-item__icon">
+                          <use xlink:href="images/icons/sprite/svg/sprite.symbol.svg#user-cart"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="product-item__box">
+                    <h3 class="product-item__title">
+                      White chair
+                    </h3>
+                    <div class="product-item__rating" data-rateyo-rating="4"></div>
+                    <span class="product-item__price">$29.00</span>
+                    <span class="product-item__list-price">29$</span>
+                    <div class="product-item__text">
+                      <p>consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                        aliqua.
+                        Ut enim ad minim veniam, quis nostrud exercitation</p>
+                    </div>
+                  </div>
+                </a>
+              </article>
+              <article class="product-item products__item">
+                <a class="product-item__link" href="#">
+                  <div class="product-item__image">
+                    <img class="product-item__img product-item__img--size" src="images/content/products/product1.jpg"
+                      alt="products images">
+                    <div class="product-item__buttons">
+                      <button class="product-item__btn product-item__btn--search" type="button">
+                        <span class="sr-only">This button redirect you on page with this item</span>
+                        <svg class="product-item__icon">
+                          <use xlink:href="images/icons/sprite/svg/sprite.symbol.svg#user-search"></use>
+                        </svg>
+                      </button>
+                      <button class="product-item__btn product-item__btn--card" type="button">
+                        <span class="sr-only">Add item to your card</span>
+                        <svg class="product-item__icon">
+                          <use xlink:href="images/icons/sprite/svg/sprite.symbol.svg#user-like"></use>
+                        </svg>
+                      </button>
+                      <button class="product-item__btn product-item__btn--like" type="button">
+                        <span class="sr-only">Add this item to your like list</span>
+                        <svg class="product-item__icon">
+                          <use xlink:href="images/icons/sprite/svg/sprite.symbol.svg#user-cart"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="product-item__box">
+                    <h3 class="product-item__title">
+                      White chair
+                    </h3>
+                    <div class="product-item__rating" data-rateyo-rating="4"></div>
+                    <span class="product-item__price">$29.00</span>
+                    <span class="product-item__list-price">29$</span>
+                    <div class="product-item__text">
+                      <p>consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                        aliqua.
+                        Ut enim ad minim veniam, quis nostrud exercitation</p>
+                    </div>
+                  </div>
+                </a>
+              </article>
+              <article class="product-item products__item">
+                <a class="product-item__link" href="#">
+                  <div class="product-item__image">
+                    <img class="product-item__img product-item__img--size" src="images/content/products/product7.jpg"
+                      alt="products images">
+                    <div class="product-item__buttons">
+                      <button class="product-item__btn product-item__btn--search" type="button">
+                        <span class="sr-only">This button redirect you on page with this item</span>
+                        <svg class="product-item__icon">
+                          <use xlink:href="images/icons/sprite/svg/sprite.symbol.svg#user-search"></use>
+                        </svg>
+                      </button>
+                      <button class="product-item__btn product-item__btn--card" type="button">
+                        <span class="sr-only">Add item to your card</span>
+                        <svg class="product-item__icon">
+                          <use xlink:href="images/icons/sprite/svg/sprite.symbol.svg#user-like"></use>
+                        </svg>
+                      </button>
+                      <button class="product-item__btn product-item__btn--like" type="button">
+                        <span class="sr-only">Add this item to your like list</span>
+                        <svg class="product-item__icon">
+                          <use xlink:href="images/icons/sprite/svg/sprite.symbol.svg#user-cart"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="product-item__box">
+                    <h3 class="product-item__title">
+                      White chair
+                    </h3>
+                    <div class="product-item__rating" data-rateyo-rating="4"></div>
+                    <span class="product-item__price">$29.00</span>
+                    <span class="product-item__list-price">29$</span>
+                    <div class="product-item__text">
+                      <p>consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                        aliqua.
+                        Ut enim ad minim veniam, quis nostrud exercitation</p>
+                    </div>
+                  </div>
+                </a>
+              </article>
+              <article class="product-item products__item">
+                <a class="product-item__link" href="#">
+                  <div class="product-item__image">
+                    <img class="product-item__img product-item__img--size" src="images/content/products/product2.jpg"
+                      alt="products images">
+                    <div class="product-item__buttons">
+                      <button class="product-item__btn product-item__btn--search" type="button">
+                        <span class="sr-only">This button redirect you on page with this item</span>
+                        <svg class="product-item__icon">
+                          <use xlink:href="images/icons/sprite/svg/sprite.symbol.svg#user-search"></use>
+                        </svg>
+                      </button>
+                      <button class="product-item__btn product-item__btn--card" type="button">
+                        <span class="sr-only">Add item to your card</span>
+                        <svg class="product-item__icon">
+                          <use xlink:href="images/icons/sprite/svg/sprite.symbol.svg#user-like"></use>
+                        </svg>
+                      </button>
+                      <button class="product-item__btn product-item__btn--like" type="button">
+                        <span class="sr-only">Add this item to your like list</span>
+                        <svg class="product-item__icon">
+                          <use xlink:href="images/icons/sprite/svg/sprite.symbol.svg#user-cart"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="product-item__box">
+                    <h3 class="product-item__title">
+                      White chair
+                    </h3>
+                    <div class="product-item__rating" data-rateyo-rating="4"></div>
+                    <span class="product-item__price">$29.00</span>
+                    <span class="product-item__list-price">29$</span>
+                    <div class="product-item__text">
+                      <p>consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                        aliqua.
+                        Ut enim ad minim veniam, quis nostrud exercitation</p>
+                    </div>
+                  </div>
+                </a>
+              </article>
+            </div>
+
+            <div class="pagination">
+              <ul class="pagination__list">
+                <li class="pagination__item pagination__item--active">
+                  <a class="pagination__link" href="#">1</a>
+                </li>
+                <li class="pagination__item">
+                  <a class="pagination__link" href="#">2</a>
+                </li>
+                <li class="pagination__item">
+                  <a class="pagination__link" href="#">3</a>
+                </li>
+              </ul>
+              <a class="pagination__next" href="#">Next</a>
+            </div>
           </div>
         </div>
       </div>
