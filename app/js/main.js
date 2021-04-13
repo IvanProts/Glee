@@ -1,8 +1,11 @@
 $(function () {
 
   $(".star").rateYo({
-    rating: 4,
-    starWidth: "12px"
+    starWidth: "12px",
+    readOnly: true,
+    ratedFill: "#ffcc00",
+    normalFill: "#d6d6d6",
+    spacing: "8px"
   });
 
   $('.filter-price__input').ionRangeSlider({
@@ -58,6 +61,8 @@ $(function () {
 
   $('.user-menu__items').on('click', function () {
     $('.user-menu').toggleClass('user-menu--active');
+    $('.products__item').toggleClass('.products__item--list');
+    $('.products__content').toggleClass('.products__content--list');
   });
 
   $('.menu-btn').on('click', function () {
