@@ -1,11 +1,42 @@
 $(function () {
 
+  $(".star").rateYo({
+    starWidth: "12px",
+    readOnly: true,
+    ratedFill: "#ffcc00",
+    normalFill: "#d6d6d6",
+    spacing: "8px"
+  });
+
+  $(".product-item__rating").rateYo({
+    starWidth: "18px",
+    readOnly: true,
+    ratedFill: "#ffcc00",
+    normalFill: "#d6d6d6",
+    spacing: "13px"
+  });
+
+  $('.filter-price__input').ionRangeSlider({
+    type: "double",
+    prefix: "$",
+    onStart: function (data){
+    $('.filter-price__from').text(data.from);
+    $('.filter-price__to').text(data.to);
+    },
+    onChange: function (data) {
+      $('.filter-price__from').text(data.from);
+      $('.filter-price__to').text(data.to);
+    },
+  })
+
+
+
   $('.top-slider__content').slick({
     dots: true,
     arrows: false,
     fade: true,
-    // autoplay: true,
-    // autoplaySpeed: 2000
+    autoplay: true,
+    autoplaySpeed: 2000
   });
 
   $('.partners__slider').slick({
@@ -16,27 +47,31 @@ $(function () {
     autoplay: true,
     autoplaySpeed: 2000,
     responsive: [{
-      breakpoint: 968,
-      settings: {
-        slidesToShow: 3,
+        breakpoint: 968,
+        settings: {
+          slidesToShow: 3,
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+        }
+      },
+      {
+        breakpoint: 440,
+        settings: {
+          slidesToShow: 1,
+        }
       }
-    },
-    {
-      breakpoint: 768,
-      settings: {
-        slidesToShow: 2,
-      }
-    },
-    {
-      breakpoint: 440,
-      settings: {
-        slidesToShow: 1,
-      }
-    }]
+    ]
   });
 
   $('.user-menu__items').on('click', function () {
     $('.user-menu').toggleClass('user-menu--active');
+    $('.products__item').toggleClass('products__item--list');
+    $('.products__box').toggleClass('products__box--list');
+    $('.pagination').toggleClass('pagination--list');
   });
 
   $('.menu-btn').on('click', function () {
