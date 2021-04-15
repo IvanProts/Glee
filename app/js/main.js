@@ -71,6 +71,7 @@ $(function () {
     $('.user-menu').toggleClass('user-menu--active');
     $('.products__item').toggleClass('products__item--list');
     $('.products__box').toggleClass('products__box--list');
+    $('.pagination').toggleClass('pagination--list');
   });
 
   $('.menu-btn').on('click', function () {

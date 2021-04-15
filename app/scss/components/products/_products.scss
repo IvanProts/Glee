@@ -8,18 +8,20 @@
     min-width: 270px;
     margin-right: 30px;
   }
-  &__content{
-    width: 100%;    
+
+  &__content {
+    width: 100%;
   }
 
   &__box {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding-bottom: 110px;
+    padding-bottom: 75px;
 
     .product-item {
       margin-bottom: 40px;
+
       &__rating {
         display: none;
       }
@@ -35,6 +37,7 @@
 
     &--list {
       flex-direction: column;
+      padding-bottom: 45px;
 
       .product-item__link {
         flex-direction: row;
@@ -42,6 +45,9 @@
 
       .product-item {
         margin-bottom: 40px;
+      }
+      .pagination{
+        justify-content: end;
       }
     }
   }
@@ -80,8 +86,8 @@
 
       .product-item__buttons {
         flex-direction: row-reverse;
-        right: -49%;
-        top: 80%;
+        right: -52%;
+        top: 77%;
         opacity: 1;
       }
 
@@ -125,7 +131,7 @@
         font-size: 30px;
         line-height: 1;
         color: $mine-shaft;
-        margin-bottom: 40px;
+        margin-bottom: 20px;
       }
 
       .product-item__text {
@@ -134,6 +140,7 @@
         font-size: 16px;
         line-height: 1.9;
         color: $blue-dianne;
+        @include text-clamp--large;
       }
 
       .product-item__rating {
@@ -186,12 +193,12 @@
     justify-content: space-between;
     align-items: center;
     border-radius: 5px;
-    padding: 15px 20px 15px 15px;
+    padding: 14px 20px 14px 15px;
   }
 }
 
 .filter-category {
-  margin-bottom: 60px;
+  margin-bottom: 53px;
 
   &__input {
     &:checked+.filter-category__checkbox {
@@ -206,7 +213,7 @@
 }
 
 .filter-price {
-  margin-bottom: 90px;
+  margin-bottom: 83px;
 
   &__title {
     &::after {
@@ -228,6 +235,7 @@
 
 .irs--flat {
   height: 30px;
+  margin-bottom: 10px;
 }
 
 .irs--flat .irs-line {
@@ -266,9 +274,10 @@
 }
 
 .filter-brand {
-  margin-bottom: 60px;
+  margin-bottom: 50px;
 
   &__title {
+
     &::after {
       right: 55%;
     }
@@ -333,6 +342,15 @@
 
 .jq-ry-container {
   padding: 0;
+}
+
+
+.partners {
+  padding-bottom: 70px;
+  &__background {
+    max-height: 250px;
+    top: -80px;
+  }
 }
 
 @import '../pagination';
