@@ -6,16 +6,16 @@
     justify-content: space-between;
   }
 
-  .pagination{
+  .pagination {
     justify-content: end;
     padding-bottom: 120px;
     margin-top: 75px;
   }
 
-  &__aside{
+  &__aside {
     width: 275px;
 
-    .filter-category{
+    .filter-category {
       color: $blue-dianne;
       line-height: 1;
     }
@@ -56,9 +56,11 @@
 }
 
 .blog-article {
-  width: 870px;
+  width: 830px;
   margin-bottom: 50px;
   position: relative;
+  font-size: 16px;
+  color: $blue-dianne;
 
   &__image {
     background-repeat: no-repeat;
@@ -66,15 +68,15 @@
     background-position: center;
     width: 830px;
     height: 500px;
-    margin-bottom: 40px;
   }
 
   .article__info {
-    position: absolute;
     background-color: $casper;
     color: $white;
     bottom: 300px;
     padding: 22px 24px;
+    width: 276px;
+    margin: -70px 0 40px;
 
     .article__author::before {
       background-image: url('../images/icons/user-blog.svg');
@@ -90,12 +92,43 @@
     margin-bottom: 40px;
   }
 
+  &__descr {
+    @extend %rubik-500;
+    ;
+    margin-bottom: 15px;
+  }
+
   &__text {
-    font-size: 16px;
     line-height: 1.8;
-    color: $blue-dianne;
     margin-bottom: 35px;
     max-width: 800px;
+  }
+
+  &__box {
+    background-color: $mystic;
+    border-left: 6px solid $casper;
+    padding: 20px 35px;
+    line-height: 1.9;
+    margin-bottom: 45px;
+  }
+
+  &__box-text {
+    max-width: 680px;
+  }
+
+  &__box-descr {
+    padding-left: 45px;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 4px;
+      background-color: $casper;
+      left: 0;
+      top: 45%;
+    }
   }
 
   &__link {
@@ -111,33 +144,150 @@
       margin-left: 40px;
       fill: $casper;
     }
-    
+
     &:hover {
       transform: translateX(10px);
     }
+
     &:active,
-    &:visited{
+    &:visited {
       opacity: 0.8;
+    }
+  }
+
+  &__part {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+  }
+
+  &__part-img {
+    width: 320px;
+    height: 210px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  &__part-box {
+    align-self: center;
+  }
+
+  &__part-title {
+    font-size: 18px;
+    @extend %rubik-500;
+  }
+
+  &__part-text {
+    max-width: 480px;
+    color: $comet;
+  }
+
+  &__part-descr {
+    color: $comet;
+    margin-bottom: 65px;
+  }
+
+  &__author {
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 0;
+    border-top: 2px solid $gallery;
+    border-bottom: 2px solid $gallery;
+    margin-bottom: 65px;
+  }
+
+  &__author-box {
+    display: flex;
+  }
+
+  &__author-image {
+    margin-right: 20px;
+  }
+
+  &__author-part {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__author-name {
+    @extend %rubik-500;
+    color: $mine-shaft;
+    font-size: 18px;
+    line-height: 1.4;
+  }
+
+  &__author-position {
+    color: $dove-gray;
+  }
+
+  &__author-text {
+    color: $mine-shaft;
+    margin-right: 30px;
+  }
+
+  &__author-social {
+    display: flex;
+  }
+
+  &__author-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+
+  &__author-tag {
+    color: $dove-gray;
+    transition: color 0.3s;
+    &:hover,
+    &:active{
+      color: $casper;
+    }
+  }
+
+  &__author-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s;
+    svg {
+      transition: fill 0.3s;
+      fill: $dove-gray;
+    }
+    &:hover,
+    &:active {
+      svg{
+        fill: $casper;
+      }
     }
   }
 }
 
 
-.blog-recent{
-  &__title{
+.blog-recent {
+  &__title {
     color: $blue-dianne;
     margin-bottom: 10px;
-    &::after{
+
+    &::after {
       right: 30%;
     }
   }
-  &__item{
+
+  &__item {
     display: flex;
-    &:not(:last-child){
+
+    &:not(:last-child) {
       margin-bottom: 20px;
     }
   }
-  &__img{
+
+  &__img {
     width: 70px;
     height: 70px;
     background-size: cover;
@@ -145,24 +295,190 @@
     background-position: center;
     margin-right: 20px;
   }
-  &__text{
+
+  &__text {
     max-width: 160px;
     @extend %rubik-400;
     line-height: 1.4;
     color: $mine-shaft;
   }
-  &__link{
+
+  &__link {
     transition: color 0.3s;
-    &:hover{
+
+    &:hover {
       color: $casper;
     }
   }
 
   .article__data {
     text-transform: uppercase;
-    &::before{
+
+    &::before {
       top: 2px;
       background-image: url('../images/icons/blog-calendar--gray.svg');
+    }
+  }
+}
+
+.comments {
+  margin-bottom: 100px;
+  &__number,
+  &__title {
+    display: inline-block;
+    @extend %rubik-700;
+    font-size: 24px;
+    color: $blue-bayouks;
+    margin-bottom: 60px;
+  }
+}
+
+.comment {
+  display: flex;
+  max-width: 830px;
+
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
+
+  &__image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-right: 30px;
+  }
+
+  &__box {
+    border-bottom: 1px solid $alto;
+    padding-bottom: 30px;
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 1;
+    margin-bottom: 20px;
+  }
+
+  &__name {
+    font-size: 16px;
+    @extend %rubik-700;
+  }
+
+  &__date {
+    color: $silver-chaise;
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 1.9;
+    color: $comet;
+    margin-bottom: 25px;
+  }
+
+  &__link,
+  &__name {
+    color: $blue-bayouks;
+  }
+
+  &__link {
+    display: flex;
+    background: none;
+    border: none;
+    cursor: pointer;
+    &:hover,
+    &:active,
+    &:focus{
+      opacity: 0.8;
+    }
+  }
+
+  &__link-icon {
+    align-self: center;
+    margin-left: 5px;
+
+    svg {
+      fill: $blue-bayouks;
+    }
+  }
+  &--ansver{
+    max-width: 700px;
+    margin-left: auto;
+  }
+}
+
+.form{
+  margin-bottom: 190px;
+  &__title{
+    font-size: 24px;
+    line-height: 1.3;
+    @extend %rubik-700;
+    color: $blue-light;
+    margin-bottom: 45px;
+  }
+  &__inputs{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  &__label{
+    
+  }
+  &__input,
+  &__textarea {
+    width: 100%;
+    border: 1px solid $mercury;
+    padding: 10px 50px 10px 20px;
+    outline-color: $casper;
+    background-repeat: no-repeat;
+    font-size: 16px;
+    &::placeholder{
+      font-size: 16px;
+      color: $dusty-gray;
+    }
+    &:active,
+    &:focus{
+      outline-color: $casper;
+      &::placeholder{
+        color: $mine-shaft;
+      }
+    }
+  }
+    &__input{
+      max-width: 400px;
+      background-position: 96% center;
+    &--icon1{
+      background-image: url('../../../images/icons/user-form.svg');
+    }
+    &--icon2 {
+      background-image: url('../../../images/icons/user-mail.svg');
+    }
+  }
+
+  &__textarea{
+    min-height: 120px;
+    resize: none;
+    background-image: url('../../../images/icons/comment.svg');
+    background-position: 98% 20px;
+    margin-bottom: 30px;
+  }
+  &__btn{
+    text-transform: uppercase;
+    padding: 10px 32px;
+    border: none;
+    background-color: $casper;
+    text-align: center;
+    color: $white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    outline-color: $casper;
+    &:hover{
+      background-color: $mystic;
+    }
+    &:active,
+    &:focus{
+      opacity: 0.8;
     }
   }
 }
