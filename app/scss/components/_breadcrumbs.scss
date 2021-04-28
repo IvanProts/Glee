@@ -1,5 +1,8 @@
 .top {
-  padding-bottom: 11vh;
+  padding-bottom: 125px;
+  @include r(1200){
+    padding-bottom: 8vh;
+  }
 
   &__content {
     padding: 20px 0;
