@@ -1,0 +1,342 @@
+.blog {
+  padding-bottom: 75px;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    @include r(1200){
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+  }
+
+  .pagination {
+    justify-content: end;
+    padding-bottom: 120px;
+    margin-top: 75px;
+  }
+
+  &__aside {
+    width: 275px;
+    @include r(1200){
+      padding-bottom: 8vh;
+    }
+
+    .filter-category {
+      color: $blue-dianne;
+      line-height: 1;
+      margin-bottom: 35px;
+    }
+  }
+}
+
+.filter-search {
+  position: relative;
+  margin-bottom: 55px;
+
+  &__input {
+    color: $casper;
+    border: 2px solid $mystic;
+    border-radius: 5px;
+    outline: $mystic;
+    padding: 5px 15px;
+    width: 230px;
+  }
+
+  &__btn {
+    position: absolute;
+    width: 48px;
+    height: 44px;
+    background-color: $mystic;
+    border: transparent;
+    border-radius: 5px;
+    right: 3px;
+    cursor: pointer;
+    background-image: url('../../../images/icons/search.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: opacity 0.3s;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
+.blog-article {
+  max-width: 830px;
+  margin-bottom: 50px;
+  position: relative;
+  font-size: 16px;
+  color: $blue-dianne;
+
+  &__image {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    max-width: 830px;
+    height: 500px;
+    @include r(968){
+      height: 80vh;
+    }
+  }
+
+  .article__info {
+    background-color: $casper;
+    color: $white;
+    bottom: 300px;
+    padding: 22px 24px;
+    width: 276px;
+    margin: -70px 0 40px;
+
+    .article__author::before {
+      background-image: url('../images/icons/user-blog.svg');
+    }
+
+    .article__data::before {
+      background-image: url('../images/icons/blog-calendar.svg');
+    }
+  }
+
+  &__title {
+    @extend %rubik-400;
+    margin-bottom: 30px;
+  }
+
+  &__descr {
+    @extend %rubik-500;
+    ;
+    margin-top: -15px;
+    margin-bottom: 15px;
+    line-height: 1.9;
+  }
+
+  &__text {
+    line-height: 1.9;
+    margin-bottom: 35px;
+    max-width: 800px;
+  }
+
+  &__box {
+    background-color: $mystic;
+    border-left: 6px solid $casper;
+    padding: 20px 35px;
+    line-height: 1.9;
+    margin-bottom:50px;
+  }
+
+  &__box-text {
+    max-width: 680px;
+  }
+
+  &__box-descr {
+    padding-left: 45px;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 4px;
+      background-color: $casper;
+      left: 0;
+      top: 45%;
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    padding: 21px 20px 21px;
+    border: 1px solid $casper;
+    font-size: 16px;
+    line-height: 1;
+    color: $casper;
+    transition: transform 0.3s;
+
+    & svg {
+      margin-left: 40px;
+      fill: $casper;
+    }
+
+    &:hover {
+      transform: translateX(10px);
+    }
+
+    &:active,
+    &:visited {
+      opacity: 0.8;
+    }
+  }
+
+  &__part {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    @include r(968){
+      flex-wrap: wrap;
+    }
+  }
+
+  &__part-img {
+    width: 320px;
+    height: 210px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  &__part-box {
+    align-self: center;
+  }
+
+  &__part-title {
+    font-size: 18px;
+    @extend %rubik-500;
+  }
+
+  &__part-text {
+    line-height: 1.9;
+    max-width: 480px;
+    color: $comet;
+  }
+
+  &__part-descr {
+    color: $comet;
+    margin-bottom: 55px;
+  }
+
+  &__author {
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 0;
+    border-top: 2px solid $gallery;
+    border-bottom: 2px solid $gallery;
+    margin-bottom: 50px;
+    @include r(767) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__author-box {
+    display: flex;
+  }
+
+  &__author-image {
+    margin-right: 30px;
+  }
+
+  &__author-part {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__author-name {
+    @extend %rubik-500;
+    color: $mine-shaft;
+    font-size: 18px;
+    line-height: 1.4;
+  }
+
+  &__author-position {
+    color: $dove-gray;
+  }
+
+  &__author-text {
+    color: $mine-shaft;
+    margin-right: 30px;
+  }
+
+  &__author-social {
+    display: flex;
+  }
+
+  &__author-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+
+  &__author-tag {
+    color: $dove-gray;
+    transition: color 0.3s;
+    &:hover,
+    &:active{
+      color: $casper;
+    }
+  }
+
+  &__author-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s;
+    svg {
+      transition: fill 0.3s;
+      fill: $dove-gray;
+    }
+    &:hover,
+    &:active {
+      svg{
+        fill: $casper;
+      }
+    }
+  }
+}
+
+.blog-recent {
+  &__title {
+    color: $blue-dianne;
+    margin-bottom: 25px;
+
+    &::after {
+      right: 30%;
+    }
+  }
+
+  &__item {
+    display: flex;
+
+    &:not(:last-child) {
+      margin-bottom: 23px;
+    }
+  }
+
+  &__img {
+    width: 70px;
+    height: 70px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-right: 20px;
+  }
+
+  &__text {
+    max-width: 160px;
+    @extend %rubik-400;
+    line-height: 1.4;
+    color: $mine-shaft;
+  }
+
+  &__link {
+    transition: color 0.3s;
+
+    &:hover {
+      color: $casper;
+    }
+  }
+
+  .article__data {
+    text-transform: uppercase;
+
+    &::before {
+      top: 2px;
+      background-image: url('../images/icons/blog-calendar--gray.svg');
+    }
+  }
+}
